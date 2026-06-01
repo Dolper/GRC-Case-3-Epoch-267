@@ -1,0 +1,42 @@
+{
+  "id": -1,
+  "jsonrpc": "2.0",
+  "result": {
+    "node_info": {
+      "channels": "40202122233038606100",
+      "id": "780e60b5defca577a160590e0bf51c6bb916d2c6",
+      "listen_addr": "tcp://gonka.spv.re:5000",
+      "moniker": "my-node",
+      "network": "gonka-mainnet",
+      "other": {
+        "rpc_address": "tcp://0.0.0.0:26657",
+        "tx_index": "on"
+      },
+      "protocol_version": {
+        "app": "0",
+        "block": "11",
+        "p2p": "8"
+      },
+      "version": "0.38.19"
+    },
+    "sync_info": {
+      "catching_up": false,
+      "earliest_app_hash": "832393FE4877C90BB2C361DF74D78B4AB9AC4594F9D0067670F558E16A0219FF",
+      "earliest_block_hash": "E96CD9696162ABF11002B7B64779AF984A7EDA440B99E625F39AD1E1A80DE566",
+      "earliest_block_height": "2830001",
+      "earliest_block_time": "2026-02-26T04:22:35.782083426Z",
+      "latest_app_hash": "80ED0F1B5DDB013AF4951B9415AE227C56B08FE29EF8ECC8FD6098702F909CB4",
+      "latest_block_hash": "4F9AB5A9AA95F83043E0083EA2B180C785CD392AAFC18688EE2D369991117735",
+      "latest_block_height": "4361386",
+      "latest_block_time": "2026-06-01T10:44:52.384842055Z"
+    },
+    "validator_info": {
+      "address": "D4E3A401A5E516C5947ADC473103C2A4B476021F",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "pM9MGrvN6zoLAuA6SKndq2GT/AY8b9tr8PodsnmV4Bk="
+      },
+      "voting_power": "0"
+    }
+  }
+}

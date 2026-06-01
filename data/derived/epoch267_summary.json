@@ -1,0 +1,184 @@
+{
+  "epoch": "267",
+  "errors": [],
+  "summaries": [
+    {
+      "application_commit": "c716df26cb8802e341a007f79b445352c53a3bee",
+      "application_version": "v0.2.13",
+      "confirmation_weight_scales": [],
+      "digests": {
+        "epoch_group_data": "8e3be14ef3ff60f7ae7b2b2f810ae02a131206c703e0b7e7207102c1a112b779",
+        "excluded_participants": "500bd9bc0822144a4b02b69da8643f0ba3e87129f9260d68a6feeb03adf70613",
+        "node_info": "32bae02275443c417ebe7320788fbfd089c9ca6061016c73fd470832ed328950",
+        "params": "8b16ebef370f13b5deb5424a624e2dd1dd4d95d079c6923d9d4084a5103c000d",
+        "status": "7a12fe95c33d1845a0e5eb2dacee707ce25031f45684f4472b3de610d8a174fe"
+      },
+      "effective_block_height": "4121152",
+      "epoch_group_id": "1039",
+      "epoch_index": "267",
+      "excluded_count": 3,
+      "last_block_height": "4136542",
+      "number_of_requests": "209",
+      "poc_models": [
+        {
+          "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+          "penalty_start_epoch": "0",
+          "weight_scale_factor": 0.3593
+        },
+        {
+          "model_id": "moonshotai/Kimi-K2.6",
+          "penalty_start_epoch": "251",
+          "weight_scale_factor": 0.78
+        },
+        {
+          "model_id": "MiniMaxAI/MiniMax-M2.7",
+          "penalty_start_epoch": "278",
+          "weight_scale_factor": 0.3024
+        }
+      ],
+      "poc_start_block_height": "4120752",
+      "source": "node2",
+      "status_height": "4361385",
+      "sub_group_models": [
+        "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "moonshotai/Kimi-K2.6"
+      ],
+      "target_confirmation_ratio": 0.01757352187724152,
+      "target_exclusion": {
+        "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "epoch_index": "267",
+        "exclusion_block_height": "4122552",
+        "reason": "failed_confirmation_poc"
+      },
+      "target_member": {
+        "confirmation_weight": "343",
+        "member_address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "ml_nodes": [],
+        "reputation": 23,
+        "voting_power": "0",
+        "weight": "19518"
+      },
+      "total_weight": "541415",
+      "validation_weight_count": 51
+    },
+    {
+      "application_commit": "c716df26cb8802e341a007f79b445352c53a3bee",
+      "application_version": "v0.2.13",
+      "confirmation_weight_scales": [],
+      "digests": {
+        "epoch_group_data": "8e3be14ef3ff60f7ae7b2b2f810ae02a131206c703e0b7e7207102c1a112b779",
+        "excluded_participants": "500bd9bc0822144a4b02b69da8643f0ba3e87129f9260d68a6feeb03adf70613",
+        "node_info": "7a2b0d13420477c4f8c42fd2c3d33a562b499a97bccdca3e4369d320ad44a02b",
+        "params": "8b16ebef370f13b5deb5424a624e2dd1dd4d95d079c6923d9d4084a5103c000d",
+        "status": "3cf1412ec84d2eb83efc1b8c05d41cbe7a781068b096505b474f702bfeb18733"
+      },
+      "effective_block_height": "4121152",
+      "epoch_group_id": "1039",
+      "epoch_index": "267",
+      "excluded_count": 3,
+      "last_block_height": "4136542",
+      "number_of_requests": "209",
+      "poc_models": [
+        {
+          "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+          "penalty_start_epoch": "0",
+          "weight_scale_factor": 0.3593
+        },
+        {
+          "model_id": "moonshotai/Kimi-K2.6",
+          "penalty_start_epoch": "251",
+          "weight_scale_factor": 0.78
+        },
+        {
+          "model_id": "MiniMaxAI/MiniMax-M2.7",
+          "penalty_start_epoch": "278",
+          "weight_scale_factor": 0.3024
+        }
+      ],
+      "poc_start_block_height": "4120752",
+      "source": "node1",
+      "status_height": "4361386",
+      "sub_group_models": [
+        "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "moonshotai/Kimi-K2.6"
+      ],
+      "target_confirmation_ratio": 0.01757352187724152,
+      "target_exclusion": {
+        "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "epoch_index": "267",
+        "exclusion_block_height": "4122552",
+        "reason": "failed_confirmation_poc"
+      },
+      "target_member": {
+        "confirmation_weight": "343",
+        "member_address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "ml_nodes": [],
+        "reputation": 23,
+        "voting_power": "0",
+        "weight": "19518"
+      },
+      "total_weight": "541415",
+      "validation_weight_count": 51
+    },
+    {
+      "application_commit": "c716df26cb8802e341a007f79b445352c53a3bee",
+      "application_version": "v0.2.13",
+      "confirmation_weight_scales": [],
+      "digests": {
+        "epoch_group_data": "8e3be14ef3ff60f7ae7b2b2f810ae02a131206c703e0b7e7207102c1a112b779",
+        "excluded_participants": "500bd9bc0822144a4b02b69da8643f0ba3e87129f9260d68a6feeb03adf70613",
+        "node_info": "689f267ebf19a1ed61bfc34ee88e6f8d87ee3423097ecbb274a2381cbbc763ce",
+        "params": "8b16ebef370f13b5deb5424a624e2dd1dd4d95d079c6923d9d4084a5103c000d",
+        "status": "789c482c024cd3ffb5d1d7f768c621271e70b5b00716e9189a24687e84669925"
+      },
+      "effective_block_height": "4121152",
+      "epoch_group_id": "1039",
+      "epoch_index": "267",
+      "excluded_count": 3,
+      "last_block_height": "4136542",
+      "number_of_requests": "209",
+      "poc_models": [
+        {
+          "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+          "penalty_start_epoch": "0",
+          "weight_scale_factor": 0.3593
+        },
+        {
+          "model_id": "moonshotai/Kimi-K2.6",
+          "penalty_start_epoch": "251",
+          "weight_scale_factor": 0.78
+        },
+        {
+          "model_id": "MiniMaxAI/MiniMax-M2.7",
+          "penalty_start_epoch": "278",
+          "weight_scale_factor": 0.3024
+        }
+      ],
+      "poc_start_block_height": "4120752",
+      "source": "spv",
+      "status_height": "4361386",
+      "sub_group_models": [
+        "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
+        "moonshotai/Kimi-K2.6"
+      ],
+      "target_confirmation_ratio": 0.01757352187724152,
+      "target_exclusion": {
+        "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "epoch_index": "267",
+        "exclusion_block_height": "4122552",
+        "reason": "failed_confirmation_poc"
+      },
+      "target_member": {
+        "confirmation_weight": "343",
+        "member_address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
+        "ml_nodes": [],
+        "reputation": 23,
+        "voting_power": "0",
+        "weight": "19518"
+      },
+      "total_weight": "541415",
+      "validation_weight_count": 51
+    }
+  ],
+  "target_address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6"
+}
