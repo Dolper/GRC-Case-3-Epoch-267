@@ -87,6 +87,24 @@ Independent findings for the target address:
 
 Important limitation: code-level pass/fail is not determined from raw `validated_weight` sums. The Gonka code uses `PoCValidationSnapshot.ModelVotingPowers` for voting power and then applies guardian tiebreaking after filtering validations to validators with model voting power. The queried public nodes no longer expose the historical `PoCValidationSnapshot` for trigger `4122271`, so the matrix records raw chain evidence and does not claim to fully replay `PoCWeightCalculator`.
 
+## Extended Timeline Scan
+
+Run:
+
+```bash
+python3 scripts/scan_case3_epochs.py --from-epoch 265 --to-epoch 280
+```
+
+This builds `data/derived/case3_epoch_scan_265_280.json` and checks zero-reward rows across epochs `265..280` using model subgroup `epoch_group_data`, model `voting_power`, and release/v0.2.12-style effective payout weight reconstruction.
+
+Summary:
+
+- strict current Case #3 rule confirms only epoch `267`;
+- epoch `265` has a related Kimi cPoC failure for the same participant and is flagged for additional GRC review / possible scope extension;
+- if GRC includes epoch `265`, the indicative additional amount is `12,951.806895703 GNK`.
+
+See `docs/case3_timeline_review_265_280.md`.
+
 ## Key External Reference
 
 Gonka release `v0.2.13` was published on 2026-05-20 and includes a confirmation PoC fix. The release notes say confirmation PoC previously used different model sets for measured weight, preserved weight, and reward rescaling during new-model bootstrap; v0.2.13 stores one epoch snapshot of confirmable models and weight-scale factors for confirmation and reward calculations.
