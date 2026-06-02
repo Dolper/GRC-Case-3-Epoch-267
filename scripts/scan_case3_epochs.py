@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import urllib.error
 import time
 import urllib.parse
@@ -23,7 +24,9 @@ BASE_URLS = (
     "http://gonka.spv.re:8000",
 )
 RAW_DIR = Path("data/raw/case3_scan")
+ARCHIVE_STATE_DIR = Path("data/raw/archive_state")
 OUT_PATH = Path("data/derived/case3_epoch_scan_265_280.json")
+ARCHIVE_QUERY_OFFSET = 281
 
 KIMI = "moonshotai/Kimi-K2.6"
 QWEN = "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8"
@@ -33,6 +36,23 @@ GUARDIANS = {
     "gonka1dkl4mah5erqggvhqkpc8j3qs5tyuetgdy552cp",
     "gonka1kx9mca3xm8u8ypzfuhmxey66u0ufxhs7nm6wc5",
 }
+
+
+def load_dotenv() -> None:
+    env_path = Path(".env")
+    if not env_path.exists():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+def archive_api_base() -> str | None:
+    base = os.environ.get("GONKA_ARCHIVE_API_BASE", "").strip().rstrip("/")
+    return base or None
 
 
 def safe_name(value: str) -> str:
@@ -77,6 +97,21 @@ def fetch_json(path: str, params: dict[str, Any] | None = None, cache: bool = Tr
     if cache:
         write_json(cache_path, payload)
     return payload
+
+
+def fetch_archive_json_with_height(path: str, height: int) -> Any:
+    base = archive_api_base()
+    if not base:
+        raise RuntimeError("GONKA_ARCHIVE_API_BASE is required when historical snapshot cache is missing")
+    req = urllib.request.Request(
+        f"{base}{path}",
+        headers={
+            "User-Agent": "gonka-grc-case3-range-scan/1.0",
+            "x-cosmos-block-height": str(height),
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.load(response)
 
 
 def decimal_param(value: dict[str, Any] | None) -> Decimal:
@@ -152,6 +187,35 @@ def stage_validations(height: str) -> dict[tuple[str, str], list[dict[str, Any]]
     return out
 
 
+def stage_snapshot(height: str) -> dict[str, Any] | None:
+    matches = sorted(ARCHIVE_STATE_DIR.glob(f"poc_validation_snapshot_{height}_at_*.json"))
+    if not matches:
+        query_height = int(height) + ARCHIVE_QUERY_OFFSET
+        payload = fetch_archive_json_with_height(
+            f"/productscience/inference/inference/poc_validation_snapshot/{height}",
+            query_height,
+        )
+        write_json(ARCHIVE_STATE_DIR / f"poc_validation_snapshot_{height}_at_{query_height}.json", payload)
+        matches = sorted(ARCHIVE_STATE_DIR.glob(f"poc_validation_snapshot_{height}_at_*.json"))
+    payload = json.load(matches[-1].open("r", encoding="utf-8"))
+    if not payload.get("found"):
+        return None
+    return payload.get("snapshot")
+
+
+def snapshot_model_maps(snapshot: dict[str, Any] | None) -> tuple[int, dict[str, dict[str, int]]]:
+    if not snapshot:
+        return 0, {}
+    total_network_weight = int_of(snapshot.get("total_network_weight"))
+    by_model: dict[str, dict[str, int]] = {}
+    for model in snapshot.get("model_voting_powers") or []:
+        by_model[model["model_id"]] = {
+            item["address"]: int_of(item.get("voting_power"))
+            for item in model.get("voting_powers") or []
+        }
+    return total_network_weight, by_model
+
+
 def voting_power_map(model_group: dict[str, Any]) -> dict[str, int]:
     return {
         item["member_address"]: int_of(item.get("voting_power"))
@@ -185,7 +249,8 @@ def model_status(
     commits: dict[tuple[str, str], int],
     validations: dict[tuple[str, str], list[dict[str, Any]]],
     voting_powers: dict[str, int],
-    root_total_weight: int,
+    total_network_weight: int,
+    snapshot_found: bool,
 ) -> dict[str, Any]:
     count = commits.get((address, model_id), 0)
     vals = validations.get((address, model_id), [])
@@ -214,13 +279,14 @@ def model_status(
         if guardian in voting_powers and guardian not in voted_guardians:
             guardian_no_vote += 1
 
+    threshold = Decimal(2) * Decimal(total_network_weight) / Decimal(3) if total_network_weight else Decimal(0)
     if count <= 0:
         reason = "no_submit"
         passed = False
-    elif valid_weight > (root_total_weight * 2 // 3):
+    elif Decimal(valid_weight) > threshold:
         reason = "pass_weight"
         passed = True
-    elif invalid_weight > (root_total_weight * 2 // 3):
+    elif Decimal(invalid_weight) > threshold:
         reason = "invalid_weight_majority"
         passed = False
     elif guardian_valid > 0 and guardian_invalid == 0:
@@ -244,6 +310,9 @@ def model_status(
         "guardian_valid": guardian_valid,
         "guardian_invalid": guardian_invalid,
         "guardian_no_vote": guardian_no_vote,
+        "snapshot_found": snapshot_found,
+        "total_network_weight": total_network_weight,
+        "two_thirds_total_network_weight": str(threshold),
     }
 
 
@@ -261,11 +330,29 @@ def scan_epoch(epoch: int, chain_params: dict[str, Any], coefficients: dict[str,
     stage_data = []
     for event in events:
         height = str(event.get("trigger_height"))
+        snapshot = stage_snapshot(height)
+        snapshot_total_network_weight, snapshot_voting_powers = snapshot_model_maps(snapshot)
         stage_data.append(
             {
                 "event": event,
                 "commits": stage_commits(height),
                 "validations": stage_validations(height),
+                "snapshot": {
+                    "found": snapshot is not None,
+                    "poc_stage_start_height": snapshot.get("poc_stage_start_height") if snapshot else None,
+                    "snapshot_height": snapshot.get("snapshot_height") if snapshot else None,
+                    "total_network_weight": snapshot.get("total_network_weight") if snapshot else None,
+                    "model_voting_power_counts": {
+                        model_id: len(items)
+                        for model_id, items in snapshot_voting_powers.items()
+                    },
+                    "model_voting_power_sums": {
+                        model_id: str(sum(items.values()))
+                        for model_id, items in snapshot_voting_powers.items()
+                    },
+                },
+                "snapshot_total_network_weight": snapshot_total_network_weight,
+                "snapshot_voting_powers": snapshot_voting_powers,
             }
         )
 
@@ -284,8 +371,9 @@ def scan_epoch(epoch: int, chain_params: dict[str, Any], coefficients: dict[str,
                     model_id=model_id,
                     commits=stage["commits"],
                     validations=stage["validations"],
-                    voting_powers=voting_powers.get(model_id, {}),
-                    root_total_weight=root_total_weight,
+                    voting_powers=stage["snapshot_voting_powers"].get(model_id) or voting_powers.get(model_id, {}),
+                    total_network_weight=stage["snapshot_total_network_weight"] or root_total_weight,
+                    snapshot_found=stage["snapshot"]["found"],
                 )
                 for model_id in MODELS
             ]
@@ -358,6 +446,7 @@ def scan_epoch(epoch: int, chain_params: dict[str, Any], coefficients: dict[str,
         "participants": len(root_weights),
         "root_total_weight": root_total_weight,
         "cpoc_event_count": len(events),
+        "cpoc_snapshots": [stage["snapshot"] for stage in stage_data],
         "zero_reward_count": len(zero_reward_rows),
         "affected_count": sum(1 for row in zero_reward_rows if row["affected"]),
         "affected": [row for row in zero_reward_rows if row["affected"]],
@@ -373,6 +462,7 @@ def scan_epoch(epoch: int, chain_params: dict[str, Any], coefficients: dict[str,
 
 
 def main() -> int:
+    load_dotenv()
     parser = argparse.ArgumentParser()
     parser.add_argument("--from-epoch", type=int, default=265)
     parser.add_argument("--to-epoch", type=int, default=280)

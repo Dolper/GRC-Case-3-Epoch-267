@@ -101,7 +101,7 @@ Internal GRC form for opening or validating a restitution case. This file follow
 | --- | --- |
 | What baseline will be used? | TBD; likely expected epoch 267 reward share using validated root weight if the exclusion is deemed protocol-caused. |
 | Why is that baseline fair? | TBD; must avoid copying earlier stuck-pw formulas unless GRC explicitly adopts them for this failure mode. |
-| What denominator will be used? | Candidate: epoch `267` total weight `541415`. |
+| What denominator will be used? | Validated: epoch `267` total weight `541415`. |
 | Should actual rewards already received be subtracted? | Yes. Endpoint validation confirms target `rewarded_coins = 0`. |
 | Should partial payouts stay eligible? | TBD by GRC policy. |
 | Should downtime, misses, invalidation, or slashing affect eligibility? | Yes for eligibility, if evidence shows local operator failure rather than protocol-caused confirmation failure. |
@@ -110,10 +110,10 @@ Internal GRC form for opening or validating a restitution case. This file follow
 Formula draft:
 
 ```text
-candidate_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
+validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
 ```
 
-Current candidate inputs:
+Validated inputs:
 
 | Item | Value |
 | --- | --- |
@@ -121,7 +121,7 @@ Current candidate inputs:
 | `epoch_total_weight` | `541415` |
 | `fixed_epoch_reward` | `284661946392227` |
 | `actual_rewarded_coins` | `0` |
-| Candidate net compensation | `10262057515368` chain integer units |
+| Validated net compensation | `10262057515368` chain integer units |
 
 Cross-check: `node2`, `node1`, and `gonka.spv.re` all reproduce the same candidate net compensation.
 

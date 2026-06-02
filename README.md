@@ -33,15 +33,15 @@ python3 scripts/calculate_candidate_compensation.py
 
 The scripts fetch raw JSON from the configured Gonka nodes, write raw responses to `data/raw/`, and write normalized summaries to `data/derived/`.
 
-## Candidate Compensation
+## Validated Restitution
 
-If GRC accepts the reward-share formula for this epoch 267 confirmation PoC failure:
+Under the current strict Case #3 scope, epoch `267` is the validated restitution row. The validated chain-style reward-share formula is:
 
 ```text
-candidate_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
+validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
 ```
 
-then the current candidate amount is:
+Validated amount:
 
 ```text
 10,262,057,515,368 chain integer units
@@ -71,21 +71,24 @@ Run:
 python3 scripts/build_cpoc_matrix.py
 ```
 
+If historical snapshot cache is missing, set `GONKA_ARCHIVE_API_BASE` in a local `.env` file. `.env` is intentionally ignored by git.
+
 This builds `data/derived/epoch267_cpoc_matrix.json` from chain-only cPoC endpoints:
 
 - `confirmation_poc_events/267`
 - `all_poc_v2_store_commits/{trigger_height}`
 - `poc_v2_validations_for_stage/{trigger_height}`
 - `all_mlnode_weight_distributions/{trigger_height}`
+- cached historical `PoCValidationSnapshot` state
 
 Independent findings for the target address:
 
 - cPoC #1 at trigger `4122271`: target submitted both Qwen and Kimi.
-- cPoC #1 Kimi raw validation weight sum was below the raw two-thirds model-weight reference.
-- cPoC #1 Qwen raw validation weight sum was also below the raw two-thirds model-weight reference.
-- cPoC #2, #3, and #4: target submitted Kimi rows and had positive guardian validation signals.
+- cPoC #1 Qwen had state voting-power shortfall but passed by guardian tiebreak.
+- cPoC #1 Kimi had state voting-power shortfall and no guardian pass, matching the exclusion mechanism.
+- cPoC #2, #3, and #4: target submitted Kimi rows and passed by guardian tiebreak.
 
-Important limitation: code-level pass/fail is not determined from raw `validated_weight` sums. The Gonka code uses `PoCValidationSnapshot.ModelVotingPowers` for voting power and then applies guardian tiebreaking after filtering validations to validators with model voting power. The queried public nodes no longer expose the historical `PoCValidationSnapshot` for trigger `4122271`, so the matrix records raw chain evidence and does not claim to fully replay `PoCWeightCalculator`.
+The state replay uses `PoCValidationSnapshot.ModelVotingPowers` and per-cPoC `total_network_weight` from cached historical app state. This is more precise than summing raw `validated_weight` fields because validators without model voting power are filtered out before the code-level pass/guardian decision.
 
 ## Extended Timeline Scan
 
@@ -95,15 +98,20 @@ Run:
 python3 scripts/scan_case3_epochs.py --from-epoch 265 --to-epoch 280
 ```
 
-This builds `data/derived/case3_epoch_scan_265_280.json` and checks zero-reward rows across epochs `265..280` using model subgroup `epoch_group_data`, model `voting_power`, and release/v0.2.12-style effective payout weight reconstruction.
+This builds `data/derived/case3_epoch_scan_265_280.json` and checks zero-reward rows across epochs `265..280` using:
+
+- cached historical `PoCValidationSnapshot` state for every cPoC trigger in the range;
+- model subgroup `epoch_group_data`;
+- release/v0.2.12-style effective payout weight reconstruction.
 
 Summary:
 
-- strict current Case #3 rule confirms only epoch `267`;
-- epoch `265` has a related Kimi cPoC failure for the same participant and is flagged for additional GRC review / possible scope extension;
+- state snapshots found: `62/62` cPoC triggers;
+- strict current Case #3 rule validates epoch `267` as the restitution row;
+- epoch `265` is a candidate for scope addition: it has a related Kimi cPoC failure for the same participant, but the mechanism differs from epoch `267`;
 - if GRC includes epoch `265`, the indicative additional amount is `12,951.806895703 GNK`.
 
-See `docs/case3_timeline_review_265_280.md`.
+See `docs/case3_timeline_review_265_280.md` and `docs/epoch265_case3_like_review.md`.
 
 ## Key External Reference
 

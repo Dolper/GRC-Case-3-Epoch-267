@@ -11,6 +11,50 @@
         "no_submit": 10
       },
       "cpoc_event_count": 3,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 41,
+            "moonshotai/Kimi-K2.6": 20
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "891766",
+            "moonshotai/Kimi-K2.6": "842654"
+          },
+          "poc_stage_start_height": "4095682",
+          "snapshot_height": "4095723",
+          "total_network_weight": "904177"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 37,
+            "moonshotai/Kimi-K2.6": 14
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "778187",
+            "moonshotai/Kimi-K2.6": "698065"
+          },
+          "poc_stage_start_height": "4098879",
+          "snapshot_height": "4098920",
+          "total_network_weight": "742909"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 13
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "768106",
+            "moonshotai/Kimi-K2.6": "687984"
+          },
+          "poc_stage_start_height": "4102890",
+          "snapshot_height": "4102931",
+          "total_network_weight": "732828"
+        }
+      ],
       "epoch": 265,
       "participants": 51,
       "root_total_weight": 904177,
@@ -85,7 +129,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 742909,
+                  "two_thirds_total_network_weight": "495272.66666666666666666666666666666666666666666667",
                   "valid_weight": 669154
                 }
               ],
@@ -200,7 +247,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 904177,
+                  "two_thirds_total_network_weight": "602784.66666666666666666666666666666666666666666667",
                   "valid_weight": 639915
                 }
               ],
@@ -219,7 +269,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 742909,
+                  "two_thirds_total_network_weight": "495272.66666666666666666666666666666666666666666667",
                   "valid_weight": 669448
                 }
               ],
@@ -238,7 +291,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 732828,
+                  "two_thirds_total_network_weight": "488552",
                   "valid_weight": 629010
                 }
               ],
@@ -311,7 +367,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 904177,
+                  "two_thirds_total_network_weight": "602784.66666666666666666666666666666666666666666667",
                   "valid_weight": 509938
                 },
                 {
@@ -323,7 +382,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 904177,
+                  "two_thirds_total_network_weight": "602784.66666666666666666666666666666666666666666667",
                   "valid_weight": 677518
                 }
               ],
@@ -342,7 +404,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 742909,
+                  "two_thirds_total_network_weight": "495272.66666666666666666666666666666666666666666667",
                   "valid_weight": 406730
                 },
                 {
@@ -353,8 +418,11 @@
                   "invalid_weight": 0,
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
-                  "reason": "pass_guardian",
+                  "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 742909,
+                  "two_thirds_total_network_weight": "495272.66666666666666666666666666666666666666666667",
                   "valid_weight": 535847
                 }
               ],
@@ -373,7 +441,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 732828,
+                  "two_thirds_total_network_weight": "488552",
                   "valid_weight": 35370
                 },
                 {
@@ -385,7 +456,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 732828,
+                  "two_thirds_total_network_weight": "488552",
                   "valid_weight": 256727
                 }
               ],
@@ -458,7 +532,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 904177,
+                  "two_thirds_total_network_weight": "602784.66666666666666666666666666666666666666666667",
                   "valid_weight": 639915
                 }
               ],
@@ -477,7 +554,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 742909,
+                  "two_thirds_total_network_weight": "495272.66666666666666666666666666666666666666666667",
                   "valid_weight": 668916
                 }
               ],
@@ -496,7 +576,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 732828,
+                  "two_thirds_total_network_weight": "488552",
                   "valid_weight": 6794
                 }
               ],
@@ -605,7 +688,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 904177,
+                  "two_thirds_total_network_weight": "602784.66666666666666666666666666666666666666666667",
                   "valid_weight": 677518
                 }
               ],
@@ -630,8 +716,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 651862
+                  "total_network_weight": 732828,
+                  "two_thirds_total_network_weight": "488552",
+                  "valid_weight": 641781
                 }
               ],
               "submitted_model_count": 1,
@@ -723,6 +812,50 @@
         "no_submit": 6
       },
       "cpoc_event_count": 3,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 40,
+            "moonshotai/Kimi-K2.6": 8
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "319021",
+            "moonshotai/Kimi-K2.6": "112386"
+          },
+          "poc_stage_start_height": "4115094",
+          "snapshot_height": "4115135",
+          "total_network_weight": "335159"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 34,
+            "moonshotai/Kimi-K2.6": 8
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "302502",
+            "moonshotai/Kimi-K2.6": "112386"
+          },
+          "poc_stage_start_height": "4116984",
+          "snapshot_height": "4117025",
+          "total_network_weight": "325697"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 8
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "302346",
+            "moonshotai/Kimi-K2.6": "112386"
+          },
+          "poc_stage_start_height": "4118103",
+          "snapshot_height": "4118144",
+          "total_network_weight": "325541"
+        }
+      ],
       "epoch": 266,
       "participants": 46,
       "root_total_weight": 335159,
@@ -791,7 +924,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 335159,
+                  "two_thirds_total_network_weight": "223439.33333333333333333333333333333333333333333333",
                   "valid_weight": 248450
                 }
               ],
@@ -888,8 +1024,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 244608
+                  "total_network_weight": 325541,
+                  "two_thirds_total_network_weight": "217027.33333333333333333333333333333333333333333333",
+                  "valid_weight": 236013
                 }
               ],
               "submitted_model_count": 1,
@@ -961,7 +1100,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 335159,
+                  "two_thirds_total_network_weight": "223439.33333333333333333333333333333333333333333333",
                   "valid_weight": 6379
                 }
               ],
@@ -980,7 +1122,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 325697,
+                  "two_thirds_total_network_weight": "217131.33333333333333333333333333333333333333333333",
                   "valid_weight": 6379
                 }
               ],
@@ -999,7 +1144,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 325541,
+                  "two_thirds_total_network_weight": "217027.33333333333333333333333333333333333333333333",
                   "valid_weight": 6379
                 }
               ],
@@ -1078,7 +1226,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 325697,
+                  "two_thirds_total_network_weight": "217131.33333333333333333333333333333333333333333333",
                   "valid_weight": 108719
                 }
               ],
@@ -1097,7 +1248,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 325541,
+                  "two_thirds_total_network_weight": "217027.33333333333333333333333333333333333333333333",
                   "valid_weight": 99972
                 }
               ],
@@ -1138,7 +1292,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 541415,
+                  "two_thirds_total_network_weight": "360943.33333333333333333333333333333333333333333333",
                   "valid_weight": 129251
                 },
                 {
@@ -1150,7 +1307,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 541415,
+                  "two_thirds_total_network_weight": "360943.33333333333333333333333333333333333333333333",
                   "valid_weight": 171571
                 }
               ],
@@ -1169,8 +1329,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 239088
+                  "total_network_weight": 520773,
+                  "two_thirds_total_network_weight": "347182",
+                  "valid_weight": 219570
                 }
               ],
               "submitted_model_count": 1,
@@ -1188,8 +1351,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 302807
+                  "total_network_weight": 520773,
+                  "two_thirds_total_network_weight": "347182",
+                  "valid_weight": 283289
                 }
               ],
               "submitted_model_count": 1,
@@ -1207,8 +1373,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 311717
+                  "total_network_weight": 513873,
+                  "two_thirds_total_network_weight": "342582",
+                  "valid_weight": 285299
                 }
               ],
               "submitted_model_count": 1,
@@ -1225,6 +1394,64 @@
         "no_submit": 1
       },
       "cpoc_event_count": 4,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 34,
+            "moonshotai/Kimi-K2.6": 27
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "534515",
+            "moonshotai/Kimi-K2.6": "512820"
+          },
+          "poc_stage_start_height": "4122271",
+          "snapshot_height": "4122312",
+          "total_network_weight": "541415"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 26
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "513873",
+            "moonshotai/Kimi-K2.6": "493302"
+          },
+          "poc_stage_start_height": "4130085",
+          "snapshot_height": "4130126",
+          "total_network_weight": "520773"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 26
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "513873",
+            "moonshotai/Kimi-K2.6": "493302"
+          },
+          "poc_stage_start_height": "4133665",
+          "snapshot_height": "4133706",
+          "total_network_weight": "520773"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 25
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "513873",
+            "moonshotai/Kimi-K2.6": "486402"
+          },
+          "poc_stage_start_height": "4134529",
+          "snapshot_height": "4134570",
+          "total_network_weight": "513873"
+        }
+      ],
       "epoch": 267,
       "participants": 51,
       "root_total_weight": 541415,
@@ -1257,7 +1484,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 541415,
+                  "two_thirds_total_network_weight": "360943.33333333333333333333333333333333333333333333",
                   "valid_weight": 129251
                 },
                 {
@@ -1269,7 +1499,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": false,
                   "reason": "weight_and_guardian_shortfall",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 541415,
+                  "two_thirds_total_network_weight": "360943.33333333333333333333333333333333333333333333",
                   "valid_weight": 171571
                 }
               ],
@@ -1288,8 +1521,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 239088
+                  "total_network_weight": 520773,
+                  "two_thirds_total_network_weight": "347182",
+                  "valid_weight": 219570
                 }
               ],
               "submitted_model_count": 1,
@@ -1307,8 +1543,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 302807
+                  "total_network_weight": 520773,
+                  "two_thirds_total_network_weight": "347182",
+                  "valid_weight": 283289
                 }
               ],
               "submitted_model_count": 1,
@@ -1326,8 +1565,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 311717
+                  "total_network_weight": 513873,
+                  "two_thirds_total_network_weight": "342582",
+                  "valid_weight": 285299
                 }
               ],
               "submitted_model_count": 1,
@@ -1405,7 +1647,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 541415,
+                  "two_thirds_total_network_weight": "360943.33333333333333333333333333333333333333333333",
                   "valid_weight": 321364
                 }
               ],
@@ -1424,8 +1669,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 321364
+                  "total_network_weight": 520773,
+                  "two_thirds_total_network_weight": "347182",
+                  "valid_weight": 301846
                 }
               ],
               "submitted_model_count": 1,
@@ -1449,8 +1697,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 309707
+                  "total_network_weight": 513873,
+                  "two_thirds_total_network_weight": "342582",
+                  "valid_weight": 283289
                 }
               ],
               "submitted_model_count": 1,
@@ -1470,6 +1721,106 @@
         "no_submit": 10
       },
       "cpoc_event_count": 7,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 43,
+            "moonshotai/Kimi-K2.6": 20
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "679352",
+            "moonshotai/Kimi-K2.6": "670724"
+          },
+          "poc_stage_start_height": "4136924",
+          "snapshot_height": "4136965",
+          "total_network_weight": "698639"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 17
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "606936",
+            "moonshotai/Kimi-K2.6": "603075"
+          },
+          "poc_stage_start_height": "4139232",
+          "snapshot_height": "4139273",
+          "total_network_weight": "630990"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 17
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "606936",
+            "moonshotai/Kimi-K2.6": "603075"
+          },
+          "poc_stage_start_height": "4141309",
+          "snapshot_height": "4141350",
+          "total_network_weight": "630990"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 17
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "605782",
+            "moonshotai/Kimi-K2.6": "603075"
+          },
+          "poc_stage_start_height": "4144898",
+          "snapshot_height": "4144939",
+          "total_network_weight": "629836"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 16
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "605782",
+            "moonshotai/Kimi-K2.6": "475883"
+          },
+          "poc_stage_start_height": "4148831",
+          "snapshot_height": "4148872",
+          "total_network_weight": "567691"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 15
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "605782",
+            "moonshotai/Kimi-K2.6": "456596"
+          },
+          "poc_stage_start_height": "4149820",
+          "snapshot_height": "4149861",
+          "total_network_weight": "548404"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 15
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "605782",
+            "moonshotai/Kimi-K2.6": "456596"
+          },
+          "poc_stage_start_height": "4150413",
+          "snapshot_height": "4150454",
+          "total_network_weight": "548404"
+        }
+      ],
       "epoch": 268,
       "participants": 57,
       "root_total_weight": 698639,
@@ -1742,7 +2093,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698639,
+                  "two_thirds_total_network_weight": "465759.33333333333333333333333333333333333333333333",
                   "valid_weight": 590864
                 }
               ],
@@ -1761,7 +2115,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 499682
                 }
               ],
@@ -1906,8 +2263,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 619380
+                  "total_network_weight": 629836,
+                  "two_thirds_total_network_weight": "419890.66666666666666666666666666666666666666666667",
+                  "valid_weight": 572523
                 }
               ],
               "submitted_model_count": 1,
@@ -1925,8 +2285,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 471574
+                  "total_network_weight": 567691,
+                  "two_thirds_total_network_weight": "378460.66666666666666666666666666666666666666666667",
+                  "valid_weight": 424717
                 }
               ],
               "submitted_model_count": 1,
@@ -1974,7 +2337,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698639,
+                  "two_thirds_total_network_weight": "465759.33333333333333333333333333333333333333333333",
                   "valid_weight": 589950
                 }
               ],
@@ -1993,7 +2359,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 482442
                 }
               ],
@@ -2012,7 +2381,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 533253
                 }
               ],
@@ -2031,7 +2403,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 629836,
+                  "two_thirds_total_network_weight": "419890.66666666666666666666666666666666666666666667",
                   "valid_weight": 496831
                 }
               ],
@@ -2050,7 +2425,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 567691,
+                  "two_thirds_total_network_weight": "378460.66666666666666666666666666666666666666666667",
                   "valid_weight": 495740
                 }
               ],
@@ -2069,7 +2447,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 548404,
+                  "two_thirds_total_network_weight": "365602.66666666666666666666666666666666666666666667",
                   "valid_weight": 495957
                 }
               ],
@@ -2088,7 +2469,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 548404,
+                  "two_thirds_total_network_weight": "365602.66666666666666666666666666666666666666666667",
                   "valid_weight": 531146
                 }
               ],
@@ -2245,7 +2629,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698639,
+                  "two_thirds_total_network_weight": "465759.33333333333333333333333333333333333333333333",
                   "valid_weight": 575036
                 }
               ],
@@ -2264,7 +2651,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 579803
                 }
               ],
@@ -2283,7 +2673,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 588609
                 }
               ],
@@ -2302,8 +2695,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 619380
+                  "total_network_weight": 629836,
+                  "two_thirds_total_network_weight": "419890.66666666666666666666666666666666666666666667",
+                  "valid_weight": 572523
                 }
               ],
               "submitted_model_count": 1,
@@ -2417,7 +2813,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698639,
+                  "two_thirds_total_network_weight": "465759.33333333333333333333333333333333333333333333",
                   "valid_weight": 575036
                 }
               ],
@@ -2436,7 +2835,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 579803
                 }
               ],
@@ -2455,7 +2857,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 630990,
+                  "two_thirds_total_network_weight": "420660",
                   "valid_weight": 588609
                 }
               ],
@@ -2474,8 +2879,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 619380
+                  "total_network_weight": 629836,
+                  "two_thirds_total_network_weight": "419890.66666666666666666666666666666666666666666667",
+                  "valid_weight": 572523
                 }
               ],
               "submitted_model_count": 1,
@@ -2573,6 +2981,92 @@
         "no_submit": 8
       },
       "cpoc_event_count": 6,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 30
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "651419",
+            "moonshotai/Kimi-K2.6": "655742"
+          },
+          "poc_stage_start_height": "4153434",
+          "snapshot_height": "4153475",
+          "total_network_weight": "679397"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "650139",
+            "moonshotai/Kimi-K2.6": "617055"
+          },
+          "poc_stage_start_height": "4155550",
+          "snapshot_height": "4155591",
+          "total_network_weight": "639430"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "650139",
+            "moonshotai/Kimi-K2.6": "617055"
+          },
+          "poc_stage_start_height": "4157969",
+          "snapshot_height": "4158010",
+          "total_network_weight": "639430"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "650139",
+            "moonshotai/Kimi-K2.6": "617055"
+          },
+          "poc_stage_start_height": "4162916",
+          "snapshot_height": "4162957",
+          "total_network_weight": "639430"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "650139",
+            "moonshotai/Kimi-K2.6": "617055"
+          },
+          "poc_stage_start_height": "4163712",
+          "snapshot_height": "4163753",
+          "total_network_weight": "639430"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "650139",
+            "moonshotai/Kimi-K2.6": "617055"
+          },
+          "poc_stage_start_height": "4164861",
+          "snapshot_height": "4164902",
+          "total_network_weight": "639430"
+        }
+      ],
       "epoch": 269,
       "participants": 58,
       "root_total_weight": 679397,
@@ -2605,7 +3099,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 679397,
+                  "two_thirds_total_network_weight": "452931.33333333333333333333333333333333333333333333",
                   "valid_weight": 589387
                 }
               ],
@@ -2624,7 +3121,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -2643,7 +3143,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -2662,7 +3165,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -2681,7 +3187,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 584213
                 }
               ],
@@ -2700,7 +3209,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 570600
                 }
               ],
@@ -2953,7 +3465,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 679397,
+                  "two_thirds_total_network_weight": "452931.33333333333333333333333333333333333333333333",
                   "valid_weight": 594093
                 }
               ],
@@ -2978,7 +3493,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 528711
                 }
               ],
@@ -2997,7 +3515,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 519384
                 }
               ],
@@ -3100,7 +3621,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 679397,
+                  "two_thirds_total_network_weight": "452931.33333333333333333333333333333333333333333333",
                   "valid_weight": 594093
                 }
               ],
@@ -3221,7 +3745,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 679397,
+                  "two_thirds_total_network_weight": "452931.33333333333333333333333333333333333333333333",
                   "valid_weight": 589387
                 }
               ],
@@ -3240,7 +3767,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -3259,7 +3789,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -3278,7 +3811,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 589387
                 }
               ],
@@ -3297,7 +3833,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 584213
                 }
               ],
@@ -3346,7 +3885,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 639430,
+                  "two_thirds_total_network_weight": "426286.66666666666666666666666666666666666666666667",
                   "valid_weight": 517793
                 }
               ],
@@ -3445,6 +3987,50 @@
         "no_submit": 2
       },
       "cpoc_event_count": 3,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "670774",
+            "moonshotai/Kimi-K2.6": "694551"
+          },
+          "poc_stage_start_height": "4168597",
+          "snapshot_height": "4168638",
+          "total_network_weight": "717467"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "670774",
+            "moonshotai/Kimi-K2.6": "693267"
+          },
+          "poc_stage_start_height": "4169542",
+          "snapshot_height": "4169583",
+          "total_network_weight": "716183"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "670774",
+            "moonshotai/Kimi-K2.6": "693267"
+          },
+          "poc_stage_start_height": "4172961",
+          "snapshot_height": "4173002",
+          "total_network_weight": "716183"
+        }
+      ],
       "epoch": 270,
       "participants": 49,
       "root_total_weight": 717467,
@@ -3549,7 +4135,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 717467,
+                  "two_thirds_total_network_weight": "478311.33333333333333333333333333333333333333333333",
                   "valid_weight": 669746
                 }
               ],
@@ -3568,7 +4157,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 716183,
+                  "two_thirds_total_network_weight": "477455.33333333333333333333333333333333333333333333",
                   "valid_weight": 672340
                 }
               ],
@@ -3611,7 +4203,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 717467,
+                  "two_thirds_total_network_weight": "478311.33333333333333333333333333333333333333333333",
                   "valid_weight": 669746
                 }
               ],
@@ -3630,7 +4225,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 716183,
+                  "two_thirds_total_network_weight": "477455.33333333333333333333333333333333333333333333",
                   "valid_weight": 672340
                 }
               ],
@@ -3673,7 +4271,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 717467,
+                  "two_thirds_total_network_weight": "478311.33333333333333333333333333333333333333333333",
                   "valid_weight": 624609
                 }
               ],
@@ -3692,7 +4293,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 716183,
+                  "two_thirds_total_network_weight": "477455.33333333333333333333333333333333333333333333",
                   "valid_weight": 551513
                 }
               ],
@@ -3719,6 +4323,106 @@
         "no_submit": 2
       },
       "cpoc_event_count": 7,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 34,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "779895",
+            "moonshotai/Kimi-K2.6": "767791"
+          },
+          "poc_stage_start_height": "4184386",
+          "snapshot_height": "4184427",
+          "total_network_weight": "796030"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "741186",
+            "moonshotai/Kimi-K2.6": "752180"
+          },
+          "poc_stage_start_height": "4185816",
+          "snapshot_height": "4185857",
+          "total_network_weight": "781853"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 20
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "741186",
+            "moonshotai/Kimi-K2.6": "734500"
+          },
+          "poc_stage_start_height": "4186813",
+          "snapshot_height": "4186854",
+          "total_network_weight": "764173"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 20
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "741186",
+            "moonshotai/Kimi-K2.6": "734500"
+          },
+          "poc_stage_start_height": "4190338",
+          "snapshot_height": "4190379",
+          "total_network_weight": "764173"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 30,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "736264",
+            "moonshotai/Kimi-K2.6": "728420"
+          },
+          "poc_stage_start_height": "4191446",
+          "snapshot_height": "4191487",
+          "total_network_weight": "753171"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 30,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "736264",
+            "moonshotai/Kimi-K2.6": "728420"
+          },
+          "poc_stage_start_height": "4193853",
+          "snapshot_height": "4193894",
+          "total_network_weight": "753171"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 30,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "736264",
+            "moonshotai/Kimi-K2.6": "728420"
+          },
+          "poc_stage_start_height": "4194323",
+          "snapshot_height": "4194364",
+          "total_network_weight": "753171"
+        }
+      ],
       "epoch": 271,
       "participants": 49,
       "root_total_weight": 796030,
@@ -3769,8 +4473,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 719061
+                  "total_network_weight": 764173,
+                  "two_thirds_total_network_weight": "509448.66666666666666666666666666666666666666666667",
+                  "valid_weight": 703450
                 }
               ],
               "submitted_model_count": 1,
@@ -3800,8 +4507,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 694529
+                  "total_network_weight": 753171,
+                  "two_thirds_total_network_weight": "502114",
+                  "valid_weight": 678918
                 }
               ],
               "submitted_model_count": 1,
@@ -3837,7 +4547,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 796030,
+                  "two_thirds_total_network_weight": "530686.66666666666666666666666666666666666666666667",
                   "valid_weight": 622966
                 }
               ],
@@ -3910,7 +4623,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 796030,
+                  "two_thirds_total_network_weight": "530686.66666666666666666666666666666666666666666667",
                   "valid_weight": 699595
                 }
               ],
@@ -4043,7 +4759,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 796030,
+                  "two_thirds_total_network_weight": "530686.66666666666666666666666666666666666666666667",
                   "valid_weight": 622889
                 }
               ],
@@ -4062,8 +4781,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 620623
+                  "total_network_weight": 781853,
+                  "two_thirds_total_network_weight": "521235.33333333333333333333333333333333333333333333",
+                  "valid_weight": 620233
                 }
               ],
               "submitted_model_count": 1,
@@ -4081,8 +4803,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 655910
+                  "total_network_weight": 764173,
+                  "two_thirds_total_network_weight": "509448.66666666666666666666666666666666666666666667",
+                  "valid_weight": 655520
                 }
               ],
               "submitted_model_count": 1,
@@ -4142,7 +4867,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 796030,
+                  "two_thirds_total_network_weight": "530686.66666666666666666666666666666666666666666667",
                   "valid_weight": 705851
                 }
               ],
@@ -4215,7 +4943,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 796030,
+                  "two_thirds_total_network_weight": "530686.66666666666666666666666666666666666666666667",
                   "valid_weight": 699595
                 }
               ],
@@ -4234,7 +4965,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 781853,
+                  "two_thirds_total_network_weight": "521235.33333333333333333333333333333333333333333333",
                   "valid_weight": 694192
                 }
               ],
@@ -4253,7 +4987,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 764173,
+                  "two_thirds_total_network_weight": "509448.66666666666666666666666666666666666666666667",
                   "valid_weight": 718724
                 }
               ],
@@ -4299,6 +5036,78 @@
         "no_submit": 2
       },
       "cpoc_event_count": 5,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "823183",
+            "moonshotai/Kimi-K2.6": "797634"
+          },
+          "poc_stage_start_height": "4202293",
+          "snapshot_height": "4202334",
+          "total_network_weight": "823183"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 31,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "797437",
+            "moonshotai/Kimi-K2.6": "797634"
+          },
+          "poc_stage_start_height": "4202715",
+          "snapshot_height": "4202756",
+          "total_network_weight": "797437"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 31,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "797437",
+            "moonshotai/Kimi-K2.6": "797634"
+          },
+          "poc_stage_start_height": "4208128",
+          "snapshot_height": "4208169",
+          "total_network_weight": "797437"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 31,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "797437",
+            "moonshotai/Kimi-K2.6": "785069"
+          },
+          "poc_stage_start_height": "4209686",
+          "snapshot_height": "4209727",
+          "total_network_weight": "784872"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 31,
+            "moonshotai/Kimi-K2.6": 21
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "797437",
+            "moonshotai/Kimi-K2.6": "656292"
+          },
+          "poc_stage_start_height": "4211724",
+          "snapshot_height": "4211765",
+          "total_network_weight": "719591"
+        }
+      ],
       "epoch": 272,
       "participants": 50,
       "root_total_weight": 823183,
@@ -4331,7 +5140,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 792893
                 },
                 {
@@ -4343,7 +5155,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 769313
                 }
               ],
@@ -4362,8 +5177,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 705182
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 681458
                 },
                 {
                   "commit_count": 14112,
@@ -4374,7 +5192,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -4393,8 +5214,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 712788
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 689064
                 },
                 {
                   "commit_count": 14528,
@@ -4405,7 +5229,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 751122
                 }
               ],
@@ -4424,8 +5251,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 709757
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
+                  "valid_weight": 686033
                 },
                 {
                   "commit_count": 7264,
@@ -4436,7 +5266,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -4455,8 +5288,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 702463
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 678739
                 },
                 {
                   "commit_count": 14528,
@@ -4467,8 +5303,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 2,
@@ -4504,7 +5343,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 731499
                 }
               ],
@@ -4523,7 +5365,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -4542,7 +5387,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 745006
                 }
               ],
@@ -4561,7 +5409,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -4580,8 +5431,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -4617,7 +5471,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 731499
                 }
               ],
@@ -4636,7 +5493,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -4655,7 +5515,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 751122
                 }
               ],
@@ -4674,7 +5537,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -4693,8 +5559,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -4754,8 +5623,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -4791,7 +5663,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 793452
                 }
               ],
@@ -4810,8 +5685,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 704261
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 680537
                 }
               ],
               "submitted_model_count": 1,
@@ -4829,8 +5707,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 713347
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 689623
                 }
               ],
               "submitted_model_count": 1,
@@ -4848,8 +5729,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 709395
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
+                  "valid_weight": 685671
                 }
               ],
               "submitted_model_count": 1,
@@ -4867,8 +5751,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 702463
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 678739
                 }
               ],
               "submitted_model_count": 1,
@@ -4904,7 +5791,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 756961
                 }
               ],
@@ -4923,7 +5813,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -4942,7 +5835,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 745006
                 }
               ],
@@ -4961,7 +5857,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -4980,8 +5879,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -5017,7 +5919,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 794373
                 }
               ],
@@ -5078,7 +5983,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 731499
                 }
               ],
@@ -5097,7 +6005,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -5152,7 +6063,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 793001
                 }
               ],
@@ -5213,7 +6127,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 715470
                 }
               ],
@@ -5232,7 +6149,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -5251,7 +6171,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 745006
                 }
               ],
@@ -5270,7 +6193,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -5289,8 +6215,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -5374,7 +6303,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 793814
                 }
               ],
@@ -5393,8 +6325,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 704261
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 680537
                 }
               ],
               "submitted_model_count": 1,
@@ -5412,8 +6347,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 712788
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 689064
                 }
               ],
               "submitted_model_count": 1,
@@ -5431,8 +6369,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 708836
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
+                  "valid_weight": 685112
                 }
               ],
               "submitted_model_count": 1,
@@ -5450,8 +6391,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 702463
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 678739
                 }
               ],
               "submitted_model_count": 1,
@@ -5487,7 +6431,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 731499
                 }
               ],
@@ -5506,7 +6453,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 757571
                 }
               ],
@@ -5525,7 +6475,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
                   "valid_weight": 745006
                 }
               ],
@@ -5544,7 +6497,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
                   "valid_weight": 748261
                 }
               ],
@@ -5563,8 +6519,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 774646
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 645869
                 }
               ],
               "submitted_model_count": 1,
@@ -5600,7 +6559,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 823183,
+                  "two_thirds_total_network_weight": "548788.66666666666666666666666666666666666666666667",
                   "valid_weight": 792893
                 }
               ],
@@ -5619,8 +6581,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 705182
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 681458
                 }
               ],
               "submitted_model_count": 1,
@@ -5638,8 +6603,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 712788
+                  "total_network_weight": 797437,
+                  "two_thirds_total_network_weight": "531624.66666666666666666666666666666666666666666667",
+                  "valid_weight": 689064
                 }
               ],
               "submitted_model_count": 1,
@@ -5657,8 +6625,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 709757
+                  "total_network_weight": 784872,
+                  "two_thirds_total_network_weight": "523248",
+                  "valid_weight": 686033
                 }
               ],
               "submitted_model_count": 1,
@@ -5676,8 +6647,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 702463
+                  "total_network_weight": 719591,
+                  "two_thirds_total_network_weight": "479727.33333333333333333333333333333333333333333333",
+                  "valid_weight": 678739
                 }
               ],
               "submitted_model_count": 1,
@@ -5696,6 +6670,22 @@
         "no_submit": 9
       },
       "cpoc_event_count": 1,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 39,
+            "moonshotai/Kimi-K2.6": 30
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "740518",
+            "moonshotai/Kimi-K2.6": "734307"
+          },
+          "poc_stage_start_height": "4215427",
+          "snapshot_height": "4215468",
+          "total_network_weight": "758715"
+        }
+      ],
       "epoch": 273,
       "participants": 61,
       "root_total_weight": 758715,
@@ -5824,7 +6814,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 758715,
+                  "two_thirds_total_network_weight": "505810",
                   "valid_weight": 566480
                 }
               ],
@@ -5981,7 +6974,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 758715,
+                  "two_thirds_total_network_weight": "505810",
                   "valid_weight": 558411
                 }
               ],
@@ -6002,6 +6998,78 @@
         "no_submit": 12
       },
       "cpoc_event_count": 5,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 38,
+            "moonshotai/Kimi-K2.6": 24
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "718737",
+            "moonshotai/Kimi-K2.6": "732178"
+          },
+          "poc_stage_start_height": "4229666",
+          "snapshot_height": "4229707",
+          "total_network_weight": "766804"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 18
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "718045",
+            "moonshotai/Kimi-K2.6": "665009"
+          },
+          "poc_stage_start_height": "4231815",
+          "snapshot_height": "4231856",
+          "total_network_weight": "698943"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 34,
+            "moonshotai/Kimi-K2.6": 17
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "715920",
+            "moonshotai/Kimi-K2.6": "644314"
+          },
+          "poc_stage_start_height": "4232787",
+          "snapshot_height": "4232828",
+          "total_network_weight": "676123"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 15
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "715452",
+            "moonshotai/Kimi-K2.6": "637069"
+          },
+          "poc_stage_start_height": "4234331",
+          "snapshot_height": "4234372",
+          "total_network_weight": "668410"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 15
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "715452",
+            "moonshotai/Kimi-K2.6": "637069"
+          },
+          "poc_stage_start_height": "4242457",
+          "snapshot_height": "4242498",
+          "total_network_weight": "668410"
+        }
+      ],
       "epoch": 274,
       "participants": 55,
       "root_total_weight": 766804,
@@ -6274,7 +7342,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 766804,
+                  "two_thirds_total_network_weight": "511202.66666666666666666666666666666666666666666667",
                   "valid_weight": 528504
                 }
               ],
@@ -6293,7 +7364,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698943,
+                  "two_thirds_total_network_weight": "465962",
                   "valid_weight": 639375
                 }
               ],
@@ -6444,7 +7518,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 766804,
+                  "two_thirds_total_network_weight": "511202.66666666666666666666666666666666666666666667",
                   "valid_weight": 637457
                 }
               ],
@@ -6463,7 +7540,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 698943,
+                  "two_thirds_total_network_weight": "465962",
                   "valid_weight": 637069
                 }
               ],
@@ -6482,8 +7562,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 634569
+                  "total_network_weight": 676123,
+                  "two_thirds_total_network_weight": "450748.66666666666666666666666666666666666666666667",
+                  "valid_weight": 613874
                 }
               ],
               "submitted_model_count": 1,
@@ -6501,8 +7584,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 652122
+                  "total_network_weight": 668410,
+                  "two_thirds_total_network_weight": "445606.66666666666666666666666666666666666666666667",
+                  "valid_weight": 631427
                 }
               ],
               "submitted_model_count": 1,
@@ -6556,7 +7642,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 676123,
+                  "two_thirds_total_network_weight": "450748.66666666666666666666666666666666666666666667",
                   "valid_weight": 612200
                 }
               ],
@@ -6581,7 +7670,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 668410,
+                  "two_thirds_total_network_weight": "445606.66666666666666666666666666666666666666666667",
                   "valid_weight": 675634
                 }
               ],
@@ -6618,7 +7710,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 766804,
+                  "two_thirds_total_network_weight": "511202.66666666666666666666666666666666666666666667",
                   "valid_weight": 637457
                 }
               ],
@@ -6643,8 +7738,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 634569
+                  "total_network_weight": 676123,
+                  "two_thirds_total_network_weight": "450748.66666666666666666666666666666666666666666667",
+                  "valid_weight": 613874
                 }
               ],
               "submitted_model_count": 1,
@@ -6662,8 +7760,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 652122
+                  "total_network_weight": 668410,
+                  "two_thirds_total_network_weight": "445606.66666666666666666666666666666666666666666667",
+                  "valid_weight": 631427
                 }
               ],
               "submitted_model_count": 1,
@@ -6681,8 +7782,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 573159
+                  "total_network_weight": 668410,
+                  "two_thirds_total_network_weight": "445606.66666666666666666666666666666666666666666667",
+                  "valid_weight": 552464
                 }
               ],
               "submitted_model_count": 1,
@@ -6893,6 +7997,50 @@
         "no_submit": 6
       },
       "cpoc_event_count": 3,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 39,
+            "moonshotai/Kimi-K2.6": 24
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "697174",
+            "moonshotai/Kimi-K2.6": "709733"
+          },
+          "poc_stage_start_height": "4248892",
+          "snapshot_height": "4248933",
+          "total_network_weight": "736925"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "692724",
+            "moonshotai/Kimi-K2.6": "704256"
+          },
+          "poc_stage_start_height": "4249774",
+          "snapshot_height": "4249815",
+          "total_network_weight": "726998"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "692724",
+            "moonshotai/Kimi-K2.6": "704256"
+          },
+          "poc_stage_start_height": "4258197",
+          "snapshot_height": "4258238",
+          "total_network_weight": "726998"
+        }
+      ],
       "epoch": 275,
       "participants": 55,
       "root_total_weight": 736925,
@@ -6937,7 +8085,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 726998,
+                  "two_thirds_total_network_weight": "484665.33333333333333333333333333333333333333333333",
                   "valid_weight": 656270
                 }
               ],
@@ -7046,7 +8197,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 736925,
+                  "two_thirds_total_network_weight": "491283.33333333333333333333333333333333333333333333",
                   "valid_weight": 663716
                 }
               ],
@@ -7065,7 +8219,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 726998,
+                  "two_thirds_total_network_weight": "484665.33333333333333333333333333333333333333333333",
                   "valid_weight": 548096
                 }
               ],
@@ -7084,7 +8241,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 726998,
+                  "two_thirds_total_network_weight": "484665.33333333333333333333333333333333333333333333",
                   "valid_weight": 666218
                 }
               ],
@@ -7213,6 +8373,64 @@
         "no_submit": 8
       },
       "cpoc_event_count": 4,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 39,
+            "moonshotai/Kimi-K2.6": 23
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "733183",
+            "moonshotai/Kimi-K2.6": "761602"
+          },
+          "poc_stage_start_height": "4264130",
+          "snapshot_height": "4264171",
+          "total_network_weight": "798029"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 37,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "732526",
+            "moonshotai/Kimi-K2.6": "673545"
+          },
+          "poc_stage_start_height": "4265965",
+          "snapshot_height": "4266006",
+          "total_network_weight": "709315"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 17
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "653745",
+            "moonshotai/Kimi-K2.6": "653978"
+          },
+          "poc_stage_start_height": "4267778",
+          "snapshot_height": "4267819",
+          "total_network_weight": "689748"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 32,
+            "moonshotai/Kimi-K2.6": 15
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "600476",
+            "moonshotai/Kimi-K2.6": "595107"
+          },
+          "poc_stage_start_height": "4270605",
+          "snapshot_height": "4270646",
+          "total_network_weight": "626975"
+        }
+      ],
       "epoch": 276,
       "participants": 54,
       "root_total_weight": 798029,
@@ -7245,7 +8463,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 687806
                 }
               ],
@@ -7264,8 +8485,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 642096
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
+                  "valid_weight": 613603
                 }
               ],
               "submitted_model_count": 1,
@@ -7283,8 +8507,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 694173
+                  "total_network_weight": 689748,
+                  "two_thirds_total_network_weight": "459832",
+                  "valid_weight": 615392
                 },
                 {
                   "commit_count": 12160,
@@ -7295,7 +8522,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 689748,
+                  "two_thirds_total_network_weight": "459832",
                   "valid_weight": 628214
                 }
               ],
@@ -7314,8 +8544,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 703765
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 575030
                 },
                 {
                   "commit_count": 12768,
@@ -7326,8 +8559,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 629637
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 551777
                 }
               ],
               "submitted_model_count": 2,
@@ -7405,7 +8641,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 687806
                 }
               ],
@@ -7460,7 +8699,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 614628
                 }
               ],
@@ -7479,7 +8721,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
                   "valid_weight": 613141
                 }
               ],
@@ -7570,7 +8815,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 614628
                 }
               ],
@@ -7589,7 +8837,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
                   "valid_weight": 613141
                 }
               ],
@@ -7614,8 +8865,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 682037
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 553302
                 }
               ],
               "submitted_model_count": 1,
@@ -7699,7 +8953,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
                   "valid_weight": 220035
                 }
               ],
@@ -7718,8 +8975,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 557738
+                  "total_network_weight": 689748,
+                  "two_thirds_total_network_weight": "459832",
+                  "valid_weight": 478957
                 }
               ],
               "submitted_model_count": 1,
@@ -7733,12 +8993,15 @@
                   "guardian_invalid": 0,
                   "guardian_no_vote": 0,
                   "guardian_valid": 3,
-                  "invalid_weight": 509776,
+                  "invalid_weight": 430995,
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
-                  "passed": true,
-                  "reason": "pass_guardian",
+                  "passed": false,
+                  "reason": "invalid_weight_majority",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 194440
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 144486
                 }
               ],
               "submitted_model_count": 1,
@@ -7774,7 +9037,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 614628
                 }
               ],
@@ -7793,7 +9059,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
                   "valid_weight": 613141
                 }
               ],
@@ -7812,8 +9081,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 694624
+                  "total_network_weight": 689748,
+                  "two_thirds_total_network_weight": "459832",
+                  "valid_weight": 615843
                 }
               ],
               "submitted_model_count": 1,
@@ -7831,8 +9103,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 704216
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 575481
                 }
               ],
               "submitted_model_count": 1,
@@ -7886,8 +9161,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 704216
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 575481
                 }
               ],
               "submitted_model_count": 1,
@@ -8049,7 +9327,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 614628
                 }
               ],
@@ -8104,7 +9385,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 798029,
+                  "two_thirds_total_network_weight": "532019.33333333333333333333333333333333333333333333",
                   "valid_weight": 595705
                 }
               ],
@@ -8123,8 +9407,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 628376
+                  "total_network_weight": 709315,
+                  "two_thirds_total_network_weight": "472876.66666666666666666666666666666666666666666667",
+                  "valid_weight": 599883
                 }
               ],
               "submitted_model_count": 1,
@@ -8148,8 +9435,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 629637
+                  "total_network_weight": 626975,
+                  "two_thirds_total_network_weight": "417983.33333333333333333333333333333333333333333333",
+                  "valid_weight": 551777
                 }
               ],
               "submitted_model_count": 1,
@@ -8167,6 +9457,22 @@
         "no_submit": 6
       },
       "cpoc_event_count": 1,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 42,
+            "moonshotai/Kimi-K2.6": 22
+          },
+          "model_voting_power_sums": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "475033",
+            "moonshotai/Kimi-K2.6": "452939"
+          },
+          "poc_stage_start_height": "4284638",
+          "snapshot_height": "4284679",
+          "total_network_weight": "502534"
+        }
+      ],
       "epoch": 277,
       "participants": 56,
       "root_total_weight": 502534,
@@ -8328,6 +9634,72 @@
         "no_submit": 4
       },
       "cpoc_event_count": 4,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 11,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 41,
+            "moonshotai/Kimi-K2.6": 21
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "254994",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "408074",
+            "moonshotai/Kimi-K2.6": "389580"
+          },
+          "poc_stage_start_height": "4290816",
+          "snapshot_height": "4290857",
+          "total_network_weight": "444033"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 11,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 40,
+            "moonshotai/Kimi-K2.6": 21
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "254994",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "407440",
+            "moonshotai/Kimi-K2.6": "389580"
+          },
+          "poc_stage_start_height": "4295294",
+          "snapshot_height": "4295335",
+          "total_network_weight": "443399"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 10,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 37,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "231942",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "383734",
+            "moonshotai/Kimi-K2.6": "364646"
+          },
+          "poc_stage_start_height": "4296271",
+          "snapshot_height": "4296312",
+          "total_network_weight": "417811"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 10,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 36,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "231942",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "383109",
+            "moonshotai/Kimi-K2.6": "364646"
+          },
+          "poc_stage_start_height": "4301852",
+          "snapshot_height": "4301893",
+          "total_network_weight": "417186"
+        }
+      ],
       "epoch": 278,
       "participants": 57,
       "root_total_weight": 444033,
@@ -8402,7 +9774,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -8421,7 +9796,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 359349
                 }
               ],
@@ -8470,7 +9848,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -8489,7 +9870,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 359349
                 }
               ],
@@ -8508,7 +9892,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
                   "valid_weight": 364922
                 }
               ],
@@ -8551,7 +9938,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -8570,7 +9960,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": false,
                   "reason": "invalid_weight_majority",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 26939
                 }
               ],
@@ -8703,7 +10096,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -8722,7 +10118,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 359349
                 }
               ],
@@ -8741,7 +10140,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
                   "valid_weight": 364922
                 }
               ],
@@ -8784,7 +10186,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 378704
                 }
               ],
@@ -8803,7 +10208,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 346519
                 }
               ],
@@ -8822,8 +10230,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 357187
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
+                  "valid_weight": 355305
                 }
               ],
               "submitted_model_count": 1,
@@ -8907,7 +10318,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 },
                 {
@@ -8919,7 +10333,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 378704
                 }
               ],
@@ -8974,7 +10391,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 378704
                 }
               ],
@@ -8993,7 +10413,10 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 346519
                 }
               ],
@@ -9012,8 +10435,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 357187
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
+                  "valid_weight": 355305
                 }
               ],
               "submitted_model_count": 1,
@@ -9031,8 +10457,11 @@
                   "model_id": "moonshotai/Kimi-K2.6",
                   "passed": true,
                   "reason": "pass_guardian",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 251997
+                  "total_network_weight": 417186,
+                  "two_thirds_total_network_weight": "278124",
+                  "valid_weight": 250115
                 }
               ],
               "submitted_model_count": 1,
@@ -9068,7 +10497,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -9087,7 +10519,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 359349
                 }
               ],
@@ -9106,7 +10541,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
                   "valid_weight": 364922
                 }
               ],
@@ -9149,7 +10587,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 444033,
+                  "two_thirds_total_network_weight": "296022",
                   "valid_weight": 382543
                 }
               ],
@@ -9168,7 +10609,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 443399,
+                  "two_thirds_total_network_weight": "295599.33333333333333333333333333333333333333333333",
                   "valid_weight": 359349
                 }
               ],
@@ -9187,7 +10631,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 417811,
+                  "two_thirds_total_network_weight": "278540.66666666666666666666666666666666666666666667",
                   "valid_weight": 364922
                 }
               ],
@@ -9206,8 +10653,11 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
-                  "valid_weight": 363287
+                  "total_network_weight": 417186,
+                  "two_thirds_total_network_weight": "278124",
+                  "valid_weight": 362662
                 }
               ],
               "submitted_model_count": 1,
@@ -9226,6 +10676,24 @@
         "no_submit": 7
       },
       "cpoc_event_count": 1,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 18,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 39,
+            "moonshotai/Kimi-K2.6": 18
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "433414",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "504834",
+            "moonshotai/Kimi-K2.6": "498294"
+          },
+          "poc_stage_start_height": "4316397",
+          "snapshot_height": "4316438",
+          "total_network_weight": "546414"
+        }
+      ],
       "epoch": 279,
       "participants": 57,
       "root_total_weight": 546414,
@@ -9282,7 +10750,10 @@
                   "model_id": "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8",
                   "passed": true,
                   "reason": "pass_weight",
+                  "snapshot_found": true,
                   "submitted": true,
+                  "total_network_weight": 546414,
+                  "two_thirds_total_network_weight": "364276",
                   "valid_weight": 470600
                 }
               ],
@@ -9445,6 +10916,88 @@
         "no_submit": 2
       },
       "cpoc_event_count": 5,
+      "cpoc_snapshots": [
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 19,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 35,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "499089",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "523333",
+            "moonshotai/Kimi-K2.6": "521308"
+          },
+          "poc_stage_start_height": "4323125",
+          "snapshot_height": "4323166",
+          "total_network_weight": "570437"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 19,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "499089",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "522759",
+            "moonshotai/Kimi-K2.6": "521308"
+          },
+          "poc_stage_start_height": "4325298",
+          "snapshot_height": "4325339",
+          "total_network_weight": "569863"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 19,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "499089",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "522759",
+            "moonshotai/Kimi-K2.6": "521308"
+          },
+          "poc_stage_start_height": "4326505",
+          "snapshot_height": "4326546",
+          "total_network_weight": "569863"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 19,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "499089",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "522759",
+            "moonshotai/Kimi-K2.6": "521308"
+          },
+          "poc_stage_start_height": "4328379",
+          "snapshot_height": "4328420",
+          "total_network_weight": "569863"
+        },
+        {
+          "found": true,
+          "model_voting_power_counts": {
+            "MiniMaxAI/MiniMax-M2.7": 19,
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 33,
+            "moonshotai/Kimi-K2.6": 19
+          },
+          "model_voting_power_sums": {
+            "MiniMaxAI/MiniMax-M2.7": "499089",
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "522759",
+            "moonshotai/Kimi-K2.6": "521308"
+          },
+          "poc_stage_start_height": "4333097",
+          "snapshot_height": "4333138",
+          "total_network_weight": "569863"
+        }
+      ],
       "epoch": 280,
       "participants": 53,
       "root_total_weight": 570437,

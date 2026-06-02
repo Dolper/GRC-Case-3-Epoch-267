@@ -174,7 +174,7 @@ def calculate_for_source(
 
     return {
         "source": source,
-        "primary_method": "candidate_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins",
+        "primary_method": "validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins",
         "participants_queried": len(performance),
         "epoch_total_weight": str(total_weight),
         "fixed_epoch_reward": str(protocol_epoch_reward),

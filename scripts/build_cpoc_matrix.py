@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import urllib.request
 from collections import defaultdict
@@ -18,7 +19,9 @@ EPOCH = "267"
 TARGET_ADDRESS = "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6"
 BASE_URL = "http://node2.gonka.ai:8000"
 RAW_DIR = Path("data/raw/cpoc")
+ARCHIVE_STATE_DIR = Path("data/raw/archive_state")
 DERIVED = Path("data/derived/epoch267_cpoc_matrix.json")
+ARCHIVE_QUERY_OFFSET = 281
 
 GUARDIAN_PARTICIPANTS = {
     "gonka1y2a9p56kv044327uycmqdexl7zs82fs5ryv5le",
@@ -27,8 +30,37 @@ GUARDIAN_PARTICIPANTS = {
 }
 
 
+def load_dotenv() -> None:
+    env_path = Path(".env")
+    if not env_path.exists():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+def archive_api_base() -> str | None:
+    base = os.environ.get("GONKA_ARCHIVE_API_BASE", "").strip().rstrip("/")
+    return base or None
+
+
 def fetch_json(url: str) -> Any:
     req = urllib.request.Request(url, headers={"User-Agent": "gonka-grc-epoch267-validation/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.load(response)
+
+
+def fetch_json_with_height(url: str, height: int) -> Any:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "gonka-grc-epoch267-validation/1.0",
+            "x-cosmos-block-height": str(height),
+        },
+    )
     with urllib.request.urlopen(req, timeout=30) as response:
         return json.load(response)
 
@@ -46,14 +78,51 @@ def read_json(path: Path) -> Any:
 
 
 def fetch_endpoint(name: str, path: str) -> Any:
+    cached_path = RAW_DIR / f"{name}.json"
+    if cached_path.exists():
+        return read_json(cached_path)
     payload = fetch_json(f"{BASE_URL}{path}")
-    write_json(RAW_DIR / f"{name}.json", payload)
+    write_json(cached_path, payload)
     return payload
 
 
 def validation_weight_map() -> dict[str, int]:
     epoch_group = read_json(Path("data/raw/node2_epoch_group_data.json"))["epoch_group_data"]
     return {item["member_address"]: int(item["weight"]) for item in epoch_group["validation_weights"]}
+
+
+def load_snapshot(stage_height: str) -> dict[str, Any] | None:
+    matches = sorted(ARCHIVE_STATE_DIR.glob(f"poc_validation_snapshot_{stage_height}_at_*.json"))
+    if not matches:
+        base = archive_api_base()
+        if not base:
+            return None
+        query_height = int(stage_height) + ARCHIVE_QUERY_OFFSET
+        path = f"/productscience/inference/inference/poc_validation_snapshot/{stage_height}"
+        payload = fetch_json_with_height(f"{base}{path}", query_height)
+        write_json(
+            ARCHIVE_STATE_DIR / f"poc_validation_snapshot_{stage_height}_at_{query_height}.json",
+            payload,
+        )
+        matches = sorted(ARCHIVE_STATE_DIR.glob(f"poc_validation_snapshot_{stage_height}_at_*.json"))
+    payload = read_json(matches[-1])
+    if not payload.get("found"):
+        return None
+    return payload.get("snapshot")
+
+
+def snapshot_model_maps(snapshot: dict[str, Any] | None) -> tuple[int, dict[str, dict[str, int]]]:
+    if not snapshot:
+        return 0, {}
+    total_network_weight = int(snapshot.get("total_network_weight") or 0)
+    by_model: dict[str, dict[str, int]] = {}
+    for model in snapshot.get("model_voting_powers") or []:
+        model_id = model["model_id"]
+        by_model[model_id] = {
+            item["address"]: int(item["voting_power"])
+            for item in model.get("voting_powers") or []
+        }
+    return total_network_weight, by_model
 
 
 def load_events() -> list[dict[str, Any]]:
@@ -117,6 +186,8 @@ def summarize_validations(validations: list[dict[str, Any]]) -> dict[tuple[str, 
 
 def stage_matrix(event: dict[str, Any], weights: dict[str, int]) -> dict[str, Any]:
     stage_height = event["trigger_height"]
+    snapshot = load_snapshot(stage_height)
+    snapshot_total_network_weight, snapshot_model_voting_powers = snapshot_model_maps(snapshot)
     commits, validations = load_stage(stage_height)
     validation_by_key = summarize_validations(validations)
     commit_by_key = {
@@ -150,6 +221,43 @@ def stage_matrix(event: dict[str, Any], weights: dict[str, int]) -> dict[str, An
         )
         total = model_total_weight.get(model_id, 0)
         raw_threshold = Decimal(2) * Decimal(total) / Decimal(3) if total else Decimal(0)
+        snapshot_total = snapshot_total_network_weight or total
+        state_threshold = Decimal(2) * Decimal(snapshot_total) / Decimal(3) if snapshot_total else Decimal(0)
+        model_voting_powers = snapshot_model_voting_powers.get(model_id, {})
+        state_valid_voting_power_sum = 0
+        state_invalid_voting_power_sum = 0
+        state_guardian_valid = 0
+        state_guardian_invalid = 0
+        state_validator_addresses = set()
+        for validator in validation["validators"]:
+            address = validator["validator"]
+            voting_power = model_voting_powers.get(address)
+            if voting_power is None:
+                continue
+            state_validator_addresses.add(address)
+            if validator["validated_weight"] > 0:
+                state_valid_voting_power_sum += voting_power
+                if address in GUARDIAN_PARTICIPANTS:
+                    state_guardian_valid += 1
+            else:
+                state_invalid_voting_power_sum += voting_power
+                if address in GUARDIAN_PARTICIPANTS:
+                    state_guardian_invalid += 1
+        state_guardian_no_vote = sum(
+            1
+            for address in GUARDIAN_PARTICIPANTS
+            if address in model_voting_powers and address not in state_validator_addresses
+        )
+        state_pass_by_weight = Decimal(state_valid_voting_power_sum) > state_threshold if snapshot_total else False
+        state_pass_by_guardian = state_guardian_valid > 0 and state_guardian_invalid == 0
+        if state_pass_by_weight:
+            state_result = "pass_weight"
+        elif state_pass_by_guardian:
+            state_result = "pass_guardian"
+        elif state_invalid_voting_power_sum > state_threshold:
+            state_result = "invalid_weight_majority"
+        else:
+            state_result = "weight_and_guardian_shortfall"
         direct_model_validator_set = direct_committers_by_model[model_id]
         filtered_guardian_valid = 0
         filtered_guardian_invalid = 0
@@ -177,8 +285,16 @@ def stage_matrix(event: dict[str, Any], weights: dict[str, int]) -> dict[str, An
                 "raw_guardian_invalid": validation["raw_guardian_invalid"],
                 "direct_model_guardian_valid": filtered_guardian_valid,
                 "direct_model_guardian_invalid": filtered_guardian_invalid,
-                "code_level_pass_unresolved": True,
-                "unresolved_reason": "Historical PoCValidationSnapshot.ModelVotingPowers is not available from the queried nodes; code-level pass uses voting powers, not raw validated_weight sums.",
+                "state_snapshot_found": snapshot is not None,
+                "state_total_network_weight": str(snapshot_total) if snapshot_total else "0",
+                "state_two_thirds_total_network_weight": str(state_threshold),
+                "state_valid_voting_power_sum": state_valid_voting_power_sum,
+                "state_invalid_voting_power_sum": state_invalid_voting_power_sum,
+                "state_guardian_valid": state_guardian_valid,
+                "state_guardian_invalid": state_guardian_invalid,
+                "state_guardian_no_vote": state_guardian_no_vote,
+                "state_result": state_result if snapshot is not None else "snapshot_missing",
+                "state_passed": state_pass_by_weight or state_pass_by_guardian,
             }
         )
 
@@ -192,6 +308,20 @@ def stage_matrix(event: dict[str, Any], weights: dict[str, int]) -> dict[str, An
         "stage_height": stage_height,
         "commit_count": len(commits),
         "validation_subject_count": len(validation_by_key),
+        "snapshot": {
+            "found": snapshot is not None,
+            "poc_stage_start_height": snapshot.get("poc_stage_start_height") if snapshot else None,
+            "snapshot_height": snapshot.get("snapshot_height") if snapshot else None,
+            "total_network_weight": snapshot.get("total_network_weight") if snapshot else None,
+            "model_voting_power_counts": {
+                model_id: len(items)
+                for model_id, items in snapshot_model_voting_powers.items()
+            },
+            "model_voting_power_sums": {
+                model_id: str(sum(items.values()))
+                for model_id, items in snapshot_model_voting_powers.items()
+            },
+        },
         "model_total_weight": {k: str(v) for k, v in model_total_weight.items()},
         "direct_committers_by_model": {
             model_id: sorted(participants)
@@ -203,6 +333,7 @@ def stage_matrix(event: dict[str, Any], weights: dict[str, int]) -> dict[str, An
 
 
 def main() -> int:
+    load_dotenv()
     weights = validation_weight_map()
     events = load_events()
     stages = [stage_matrix(event, weights) for event in events]
@@ -220,7 +351,7 @@ def main() -> int:
         "target_address": TARGET_ADDRESS,
         "guardian_participants": sorted(GUARDIAN_PARTICIPANTS),
         "code_pass_rule": "Non-slot mode passes if model-voting-power valid votes exceed 2/3 of total network weight; if no majority, guardian tiebreaker is evaluated only after filtering validations to validators with voting power for that model.",
-        "snapshot_limitation": "The queried nodes no longer expose the historical PoCValidationSnapshot for trigger 4122271, so this matrix records raw cPoC evidence and does not assert code-level pass/fail from raw validated_weight fields.",
+        "snapshot_source": "Cached historical PoCValidationSnapshot responses stored in data/raw/archive_state/.",
         "target_stage_status": target_stage_status,
         "stages": stages,
     }
