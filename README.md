@@ -38,7 +38,7 @@ The scripts fetch raw JSON from the configured Gonka nodes, write raw responses 
 If GRC accepts the reward-share formula for this epoch 267 confirmation PoC failure:
 
 ```text
-candidate_loss = target_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
+candidate_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
 ```
 
 then the current candidate amount is:
@@ -49,14 +49,19 @@ then the current candidate amount is:
 
 Inputs:
 
-- `target_weight = 19518`
+- `counterfactual_effective_weight = 19518`
 - `epoch_total_weight = 541415`
 - `fixed_epoch_reward = 284661946392227`
 - `actual_rewarded_coins = 0`
 
 The same amount is reproduced from all three configured public sources: `node2`, `node1`, and `gonka.spv.re`.
 
-The actual distributed `rewarded_coins` pool gives a reference value of `8,879,447,529,574` integer units, but that undercounts protocol-caused losses because the Bitcoin reward code keeps invalid/CPoC-reduced shares in the full denominator and sends undistributed remainder to governance rather than redistributing it. The smaller `earned_coins` pool gives a secondary reference of `836,844,203` integer units, but this appears to be a different pool from the epoch reward/subsidy stream and is not the primary candidate for miner reward restitution.
+The numerator is derived from chain subgroup data using the release/v0.2.12 settlement logic:
+
+- Kimi raw subgroup PoC weight: `51822`, scale factor `0.78`, scaled weight `40421`
+- Qwen raw subgroup PoC weight: `873`, scale factor `0.3593`, scaled weight `313`
+- Actual effective weight from damaged parent confirmation weight `343`: `164`
+- Counterfactual effective weight after adding the missing Kimi scaled weight and applying the parent root-weight cap: `19518`
 
 ## cPoC Matrix
 

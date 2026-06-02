@@ -110,14 +110,14 @@ Internal GRC form for opening or validating a restitution case. This file follow
 Formula draft:
 
 ```text
-candidate_loss = target_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
+candidate_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins
 ```
 
 Current candidate inputs:
 
 | Item | Value |
 | --- | --- |
-| `target_weight` | `19518` |
+| `counterfactual_effective_weight` | `19518` |
 | `epoch_total_weight` | `541415` |
 | `fixed_epoch_reward` | `284661946392227` |
 | `actual_rewarded_coins` | `0` |

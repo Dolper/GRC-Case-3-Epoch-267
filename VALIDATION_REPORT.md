@@ -33,24 +33,50 @@ If committee display precision is 6 decimals, this is:
 - Participant root weight: `19518`
 - Participant confirmation weight: `343`
 - Participant confirmation ratio: about `1.76%`
+- Kimi subgroup raw PoC weight: `51822`
+- Kimi weight scale factor: `0.78`
+- Qwen subgroup raw PoC weight: `873`
+- Qwen weight scale factor: `0.3593`
 - Participant actual rewarded coins: `0`
 
 The same core values were reproduced from `node2`, `node1`, and `gonka.spv.re`.
 
 ## Calculation
 
-The primary restitution calculation follows the protocol Bitcoin reward logic: use `fixed_epoch_reward` as the epoch reward pool and the full root epoch weight as the denominator. The actual distributed `rewarded_coins` sum is lower because invalid/CPoC-reduced/unclaimed shares are not redistributed to other participants; they become governance remainder.
+The primary restitution calculation follows the protocol Bitcoin reward logic: use `fixed_epoch_reward` as the epoch reward pool and the full root epoch weight as the denominator. The numerator is the counterfactual effective weight derived from chain subgroup data using the release/v0.2.12 settlement logic.
+
+Effective-weight reconstruction:
+
+```text
+Kimi scaled weight = floor(51822 * 0.78) = 40421
+Qwen scaled weight = floor(873 * 0.3593) = 313
+scaled model total = 40734
+
+actual effective weight =
+  floor(343 * 19518 / 40734) = 164
+
+counterfactual confirmation weight =
+  actual parent confirmation_weight + missing Kimi scaled weight
+  = 343 + 40421
+  = 40764
+
+counterfactual effective weight =
+  min(19518, floor(40764 * 19518 / 40734))
+  = 19518
+```
+
+The actual distributed `rewarded_coins` sum is lower because invalid/CPoC-reduced/unclaimed shares are not redistributed to other participants; they become governance remainder.
 
 Formula:
 
 ```text
-candidate_loss = floor(target_weight * fixed_epoch_reward / epoch_total_weight) - actual_rewarded_coins
+candidate_loss = floor(counterfactual_effective_weight * fixed_epoch_reward / epoch_total_weight) - actual_rewarded_coins
 ```
 
 Inputs:
 
 ```text
-target_weight = 19518
+counterfactual_effective_weight = 19518
 fixed_epoch_reward = 284661946392227 nGNK
 epoch_total_weight = 541415
 actual_rewarded_coins = 0
@@ -66,7 +92,7 @@ floor(19518 * 284661946392227 / 541415) - 0
 
 ## Investigator Report Check
 
-The investigator report uses the same effective approach and reaches the same human-display value, `10262.057515 GNK`.
+The latest reviewer comment asks to derive payout weight from model subgroup chain data rather than hardcode the root weight. This validation now does that: the release/v0.2.12-style counterfactual effective weight caps back to `19518`, so the proposed payout remains `10262.057515 GNK`.
 
 The only material numeric difference found is a 1 nGNK rounding edge in the chain integer representation. This validation floors the protocol integer calculation to `10262057515368 nGNK`. The investigator report appears to present `10262057515369 nGNK` / `10,262.057515 GONKA`, which is equivalent at 6 decimal GNK display precision but differs by 1 nGNK at raw integer precision.
 
