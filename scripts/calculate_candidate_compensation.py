@@ -27,6 +27,7 @@ SOURCES = {
 }
 RAW_EPOCH_GROUP = Path("data/raw/node2_epoch_group_data.json")
 OUTPUT = Path("data/derived/epoch267_candidate_compensation.json")
+HISTORICAL_COEFFICIENTS = Path("data/derived/historical_model_coefficients.json")
 
 
 def fetch_json(url: str) -> Any:
@@ -101,6 +102,11 @@ def fixed_epoch_reward(epoch_group: dict[str, Any]) -> int:
 
 
 def model_coefficients() -> dict[str, Decimal]:
+    if HISTORICAL_COEFFICIENTS.exists():
+        historical = read_json(HISTORICAL_COEFFICIENTS).get("epochs", {}).get(EPOCH)
+        if historical:
+            return {model_id: Decimal(str(value)) for model_id, value in historical.items()}
+
     params = read_json(Path("data/raw/node2_params.json"))["params"]
     out: dict[str, Decimal] = {}
     for config in params["poc_params"].get("models") or []:

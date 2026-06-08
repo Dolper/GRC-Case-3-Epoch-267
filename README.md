@@ -58,9 +58,9 @@ The same amount is reproduced from all three configured public sources: `node2`,
 
 The numerator is derived from chain subgroup data using the release/v0.2.12 settlement logic:
 
-- Kimi raw subgroup PoC weight: `51822`, scale factor `0.78`, scaled weight `40421`
+- Kimi raw subgroup PoC weight: `51822`, historical scale factor `1.2620856201975851`, scaled weight `65403`
 - Qwen raw subgroup PoC weight: `873`, scale factor `0.3593`, scaled weight `313`
-- Actual effective weight from damaged parent confirmation weight `343`: `164`
+- Actual effective weight from damaged parent confirmation weight `343`: `101`
 - Counterfactual effective weight after adding the missing Kimi scaled weight and applying the parent root-weight cap: `19518`
 
 ## cPoC Matrix
@@ -101,6 +101,7 @@ python3 scripts/scan_case3_epochs.py --from-epoch 265 --to-epoch 280
 This builds `data/derived/case3_epoch_scan_265_280.json` and checks zero-reward rows across epochs `265..280` using:
 
 - cached historical `PoCValidationSnapshot` state for every cPoC trigger in the range;
+- historical model coefficient overrides for the affected/candidate epochs in `data/derived/historical_model_coefficients.json`;
 - model subgroup `epoch_group_data`;
 - release/v0.2.12-style effective payout weight reconstruction.
 
@@ -109,9 +110,10 @@ Summary:
 - state snapshots found: `62/62` cPoC triggers;
 - strict current Case #3 rule validates epoch `267` as the restitution row;
 - epoch `265` is a candidate for scope addition: it has a related Kimi cPoC failure for the same participant, but the mechanism differs from epoch `267`;
-- if GRC includes epoch `265`, the indicative additional amount is `12,951.806895703 GNK`.
+- if GRC includes epoch `265`, the historical-coefficient chain-style amount is `20,894.006146127 GNK`;
+- the corrected Kimi-only total for epochs `267` and `265` is `31,156.063661495 GNK`.
 
-See `docs/case3_timeline_review_265_280.md` and `docs/epoch265_case3_like_review.md`.
+See `docs/case3_timeline_review_265_280.md`, `docs/epoch265_case3_like_review.md`, and `docs/broader_review_validation.md`.
 
 ## Key External Reference
 

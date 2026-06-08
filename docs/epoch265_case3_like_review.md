@@ -13,7 +13,7 @@ It is not the same strict pattern as the validated epoch `267` Case 3 row. The s
 If GRC explicitly extends scope to include this related epoch `265` mechanism, the indicative compensation amount is:
 
 ```text
-12951.806895703 GNK
+20894.006146127 GNK
 ```
 
 If GRC keeps the current strict Case 3 scope, epoch `265` should remain a scope-addition candidate, not a validated restitution row.
@@ -211,22 +211,22 @@ For this participant:
 
 ```text
 Kimi raw subgroup PoC weight = 52279
-Kimi scale factor = 0.78
-Kimi scaled weight = floor(52279 * 0.78) = 40777
+Kimi historical scale factor = 1.2620856201975851
+Kimi scaled weight = floor(52279 * 1.2620856201975851) = 65980
 
 Qwen raw subgroup PoC weight = 923
 Qwen scale factor = 0.3593
 Qwen scaled weight = floor(923 * 0.3593) = 331
 
-counterfactual confirmation_weight = 323 + 40777 = 41100
-rawTotal = 40777 + 331 = 41108
+counterfactual confirmation_weight = 323 + 65980 = 66303
+rawTotal = 65980 + 331 = 66311
 rootWeight = 66311
 ```
 
 Because `rootWeight >= rawTotal`, the release/v0.2.12 guard skips the scale-down branch:
 
 ```text
-effective counterfactual participantWeight = 41100
+effective counterfactual participantWeight = 66303
 ```
 
 Epoch reward pool from chain params:
@@ -242,12 +242,12 @@ fixedEpochReward = 284932503735690 nGNK
 Indicative scope-extension amount:
 
 ```text
-floor(41100 * 284932503735690 / 904177)
-= 12951806895703 nGNK
-= 12951.806895703 GNK
+floor(66303 * 284932503735690 / 904177)
+= 20894006146127 nGNK
+= 20894.006146127 GNK
 ```
 
-The earlier `20896.527179100 GNK` figure should not be used for this validation unless a different policy is intentionally adopted. It comes from the same epoch reward pool and the same root denominator, but uses the full root weight `66311` as the payout numerator:
+The `20896.527179100 GNK` figure should not be used for exact chain-style validation unless a different policy is intentionally adopted. It comes from the same epoch reward pool and the same root denominator, but uses the full root weight `66311` as the payout numerator:
 
 ```text
 floor(66311 * 284932503735690 / 904177)
@@ -258,7 +258,7 @@ floor(66311 * 284932503735690 / 904177)
 So the discrepancy is not caused by denominator or reward-pool choice. It is caused by numerator choice:
 
 ```text
-chain-style effective numerator = 41100
+chain-style effective numerator = 66303
 full-root-weight numerator = 66311
 ```
 

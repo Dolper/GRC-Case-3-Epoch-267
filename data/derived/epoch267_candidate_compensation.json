@@ -12,7 +12,7 @@
       "candidate_fixed_reward_gross_coins_floor": "10262057515368",
       "candidate_fixed_reward_net_coins_decimal": "10262057515368.962045750487149414035444160209820563",
       "candidate_fixed_reward_net_coins_floor": "10262057515368",
-      "counterfactual_confirmation_weight": "40764",
+      "counterfactual_confirmation_weight": "65746",
       "counterfactual_effective_weight_v0_2_12": "19518",
       "counterfactual_missing_model": "moonshotai/Kimi-K2.6",
       "epoch_total_weight": "541415",
@@ -21,7 +21,7 @@
       "primary_method": "validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins",
       "source": "node2",
       "target_actual_earned_coins": "0",
-      "target_actual_effective_weight_v0_2_12": "164",
+      "target_actual_effective_weight_v0_2_12": "101",
       "target_actual_rewarded_coins": "0",
       "target_confirmation_ratio": "0.017573521877241520647607336817296854185879700789015",
       "target_confirmation_weight": "343",
@@ -31,13 +31,13 @@
       },
       "target_model_scaled_weights": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "313",
-        "moonshotai/Kimi-K2.6": "40421"
+        "moonshotai/Kimi-K2.6": "65403"
       },
       "target_model_weight_scale_factors": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "0.3593",
-        "moonshotai/Kimi-K2.6": "0.78"
+        "moonshotai/Kimi-K2.6": "1.2620856201975851"
       },
-      "target_scaled_model_total": "40734",
+      "target_scaled_model_total": "65716",
       "target_weight": "19518"
     },
     {
@@ -45,7 +45,7 @@
       "candidate_fixed_reward_gross_coins_floor": "10262057515368",
       "candidate_fixed_reward_net_coins_decimal": "10262057515368.962045750487149414035444160209820563",
       "candidate_fixed_reward_net_coins_floor": "10262057515368",
-      "counterfactual_confirmation_weight": "40764",
+      "counterfactual_confirmation_weight": "65746",
       "counterfactual_effective_weight_v0_2_12": "19518",
       "counterfactual_missing_model": "moonshotai/Kimi-K2.6",
       "epoch_total_weight": "541415",
@@ -54,7 +54,7 @@
       "primary_method": "validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins",
       "source": "node1",
       "target_actual_earned_coins": "0",
-      "target_actual_effective_weight_v0_2_12": "164",
+      "target_actual_effective_weight_v0_2_12": "101",
       "target_actual_rewarded_coins": "0",
       "target_confirmation_ratio": "0.017573521877241520647607336817296854185879700789015",
       "target_confirmation_weight": "343",
@@ -64,13 +64,13 @@
       },
       "target_model_scaled_weights": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "313",
-        "moonshotai/Kimi-K2.6": "40421"
+        "moonshotai/Kimi-K2.6": "65403"
       },
       "target_model_weight_scale_factors": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "0.3593",
-        "moonshotai/Kimi-K2.6": "0.78"
+        "moonshotai/Kimi-K2.6": "1.2620856201975851"
       },
-      "target_scaled_model_total": "40734",
+      "target_scaled_model_total": "65716",
       "target_weight": "19518"
     },
     {
@@ -78,7 +78,7 @@
       "candidate_fixed_reward_gross_coins_floor": "10262057515368",
       "candidate_fixed_reward_net_coins_decimal": "10262057515368.962045750487149414035444160209820563",
       "candidate_fixed_reward_net_coins_floor": "10262057515368",
-      "counterfactual_confirmation_weight": "40764",
+      "counterfactual_confirmation_weight": "65746",
       "counterfactual_effective_weight_v0_2_12": "19518",
       "counterfactual_missing_model": "moonshotai/Kimi-K2.6",
       "epoch_total_weight": "541415",
@@ -87,7 +87,7 @@
       "primary_method": "validated_loss = counterfactual_effective_weight / epoch_total_weight * fixed_epoch_reward - actual_rewarded_coins",
       "source": "spv",
       "target_actual_earned_coins": "0",
-      "target_actual_effective_weight_v0_2_12": "164",
+      "target_actual_effective_weight_v0_2_12": "101",
       "target_actual_rewarded_coins": "0",
       "target_confirmation_ratio": "0.017573521877241520647607336817296854185879700789015",
       "target_confirmation_weight": "343",
@@ -97,13 +97,13 @@
       },
       "target_model_scaled_weights": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "313",
-        "moonshotai/Kimi-K2.6": "40421"
+        "moonshotai/Kimi-K2.6": "65403"
       },
       "target_model_weight_scale_factors": {
         "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "0.3593",
-        "moonshotai/Kimi-K2.6": "0.78"
+        "moonshotai/Kimi-K2.6": "1.2620856201975851"
       },
-      "target_scaled_model_total": "40734",
+      "target_scaled_model_total": "65716",
       "target_weight": "19518"
     }
   ],

@@ -1,0 +1,17 @@
+{
+  "notes": [
+    "Historical params fetched with x-cosmos-block-height from an archive node configured locally via GONKA_ARCHIVE_API_BASE.",
+    "The archive endpoint is intentionally not stored in this repository.",
+    "Use these overrides for chain-style validation of the affected/candidate epochs; current public params differ for Kimi."
+  ],
+  "epochs": {
+    "265": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "0.3593",
+      "moonshotai/Kimi-K2.6": "1.2620856201975851"
+    },
+    "267": {
+      "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": "0.3593",
+      "moonshotai/Kimi-K2.6": "1.2620856201975851"
+    }
+  }
+}

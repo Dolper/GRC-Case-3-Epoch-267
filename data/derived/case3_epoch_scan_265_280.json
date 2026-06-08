@@ -345,14 +345,14 @@
           "actual_rewarded_coins": 0,
           "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
           "affected": false,
-          "counterfactual_effective_weight_v0_2_12": 41100,
+          "counterfactual_effective_weight_v0_2_12": 66303,
           "parent_confirmation_weight": 323,
           "restitution_gonka": "0",
           "restitution_ngonka": 0,
           "root_weight": 66311,
           "scaled_model_weights": {
             "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 331,
-            "moonshotai/Kimi-K2.6": 40777
+            "moonshotai/Kimi-K2.6": 65980
           },
           "statuses": [
             {
@@ -1266,7 +1266,7 @@
     {
       "affected": [
         {
-          "actual_effective_weight_v0_2_12": 164,
+          "actual_effective_weight_v0_2_12": 101,
           "actual_rewarded_coins": 0,
           "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
           "affected": true,
@@ -1277,7 +1277,7 @@
           "root_weight": 19518,
           "scaled_model_weights": {
             "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 313,
-            "moonshotai/Kimi-K2.6": 40421
+            "moonshotai/Kimi-K2.6": 65403
           },
           "statuses": [
             {
@@ -1458,7 +1458,7 @@
       "zero_reward_count": 3,
       "zero_reward_rows": [
         {
-          "actual_effective_weight_v0_2_12": 164,
+          "actual_effective_weight_v0_2_12": 101,
           "actual_rewarded_coins": 0,
           "address": "gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6",
           "affected": true,
@@ -1469,7 +1469,7 @@
           "root_weight": 19518,
           "scaled_model_weights": {
             "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": 313,
-            "moonshotai/Kimi-K2.6": 40421
+            "moonshotai/Kimi-K2.6": 65403
           },
           "statuses": [
             {

@@ -34,7 +34,7 @@ If committee display precision is 6 decimals, this is:
 - Participant confirmation weight: `343`
 - Participant confirmation ratio: about `1.76%`
 - Kimi subgroup raw PoC weight: `51822`
-- Kimi weight scale factor: `0.78`
+- Kimi historical weight scale factor: `1.2620856201975851`
 - Qwen subgroup raw PoC weight: `873`
 - Qwen weight scale factor: `0.3593`
 - Participant actual rewarded coins: `0`
@@ -48,20 +48,20 @@ The primary restitution calculation follows the protocol Bitcoin reward logic: u
 Effective-weight reconstruction:
 
 ```text
-Kimi scaled weight = floor(51822 * 0.78) = 40421
+Kimi scaled weight = floor(51822 * 1.2620856201975851) = 65403
 Qwen scaled weight = floor(873 * 0.3593) = 313
-scaled model total = 40734
+scaled model total = 65716
 
 actual effective weight =
-  floor(343 * 19518 / 40734) = 164
+  floor(343 * 19518 / 65716) = 101
 
 counterfactual confirmation weight =
   actual parent confirmation_weight + missing Kimi scaled weight
-  = 343 + 40421
-  = 40764
+  = 343 + 65403
+  = 65746
 
 counterfactual effective weight =
-  min(19518, floor(40764 * 19518 / 40734))
+  min(19518, floor(65746 * 19518 / 65716))
   = 19518
 ```
 
@@ -105,7 +105,7 @@ epoch = 265
 address = gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6
 exclusion reason = failed_confirmation_poc
 actual reward = 0
-indicative amount if included = 12951.806895703 GNK
+indicative amount if included = 20894.006146127 GNK
 ```
 
 This is not the same narrow pattern as the validated epoch `267` Case 3 row.
@@ -120,8 +120,17 @@ The detailed epoch `265` checklist is in `docs/epoch265_case3_like_review.md`. I
 If GRC extends Case 3 to include the epoch `265` candidate, the combined indicative payout for epochs `265` and `267` is:
 
 ```text
-23213.864411071 GNK
+31156.063661495 GNK
 ```
+
+The previous local draft used latest public params and therefore undercounted epoch `265`. Historical params at the epoch `265` cPoC/settlement heights show:
+
+```text
+Qwen weight_scale_factor = 0.3593
+Kimi weight_scale_factor = 1.2620856201975851
+```
+
+Using those historical coefficients, the epoch `265` Kimi candidate reconstructs to effective payout weight `66303`, not the full root weight `66311`. This is why the corrected amount is slightly below the investigator's full-root figure of `20896.527179100 GNK`.
 
 ## Root-Cause Questions
 

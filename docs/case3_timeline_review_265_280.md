@@ -18,12 +18,12 @@ Candidate scope-addition row:
 
 | epoch | participant | indicative amount | note |
 | ---: | --- | ---: | --- |
-| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | `12951.806895703 GNK` | Kimi failure at cPoC event `2`, not cPoC event `0`; guardian split rather than guardian no-vote shortfall |
+| 265 | `gonka1j7x6dv42xehe9e5au4ku3wvzwtqlegfjhlvzj6` | `20894.006146127 GNK` | Kimi failure at cPoC event `2`, not cPoC event `0`; guardian split rather than guardian no-vote shortfall |
 
 If GRC adds epoch `265` to scope alongside the validated epoch `267` row, the combined indicative payout is:
 
 ```text
-23213.864411071 GNK
+31156.063661495 GNK
 ```
 
 ## Method
@@ -83,19 +83,19 @@ Payout weight reconstruction:
 
 ```text
 Kimi raw subgroup PoC weight = 51822
-Kimi scale factor = 0.78
-Kimi scaled weight = 40421
+Kimi historical scale factor = 1.2620856201975851
+Kimi scaled weight = 65403
 
 Qwen raw subgroup PoC weight = 873
 Qwen scale factor = 0.3593
 Qwen scaled weight = 313
 
-scaled model total = 40734
+scaled model total = 65716
 parent confirmation_weight = 343
-actual effective weight = floor(343 * 19518 / 40734) = 164
+actual effective weight = floor(343 * 19518 / 65716) = 101
 
-counterfactual confirmation_weight = 343 + 40421 = 40764
-counterfactual effective weight = min(19518, floor(40764 * 19518 / 40734)) = 19518
+counterfactual confirmation_weight = 343 + 65403 = 65746
+counterfactual effective weight = min(19518, floor(65746 * 19518 / 65716)) = 19518
 ```
 
 Restitution:
@@ -146,25 +146,25 @@ Payout weight reconstruction:
 
 ```text
 Kimi raw subgroup PoC weight = 52279
-Kimi scale factor = 0.78
-Kimi scaled weight = 40777
+Kimi historical scale factor = 1.2620856201975851
+Kimi scaled weight = 65980
 
 Qwen raw subgroup PoC weight = 923
 Qwen scale factor = 0.3593
 Qwen scaled weight = 331
 
-scaled model total = 41108
+scaled model total = 66311
 parent confirmation_weight = 323
 actual effective weight = 323
 
-counterfactual confirmation_weight = 323 + 40777 = 41100
-counterfactual effective weight = 41100
+counterfactual confirmation_weight = 323 + 65980 = 66303
+counterfactual effective weight = 66303
 ```
 
 Indicative restitution if GRC adds this candidate to Case 3 scope:
 
 ```text
-12951.806895703 GNK
+20894.006146127 GNK
 ```
 
 ## Range Scan Result
@@ -189,6 +189,8 @@ Indicative restitution if GRC adds this candidate to Case 3 scope:
 | 280 | 2 | 0 |
 
 Other zero-reward shortfall-like rows in the scan were Qwen-only, invalid-majority, no-submit, or had zero counterfactual effective payout weight under the Kimi-focused reconstruction.
+
+The Kimi-focused validation does not include Qwen-only rows in the recommended restitution scope. Qwen-only rows may be listed for comparison with external broader-scope reports, but they require a separate GRC policy decision.
 
 ## Files
 

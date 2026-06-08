@@ -26,6 +26,7 @@ BASE_URLS = (
 RAW_DIR = Path("data/raw/case3_scan")
 ARCHIVE_STATE_DIR = Path("data/raw/archive_state")
 OUT_PATH = Path("data/derived/case3_epoch_scan_265_280.json")
+HISTORICAL_COEFFICIENTS = Path("data/derived/historical_model_coefficients.json")
 ARCHIVE_QUERY_OFFSET = 281
 
 KIMI = "moonshotai/Kimi-K2.6"
@@ -138,6 +139,15 @@ def model_coefficients(chain_params: dict[str, Any]) -> dict[str, Decimal]:
         if model_id:
             out[model_id] = decimal_param(config.get("weight_scale_factor"))
     return out
+
+
+def historical_model_coefficients(epoch: int) -> dict[str, Decimal] | None:
+    if not HISTORICAL_COEFFICIENTS.exists():
+        return None
+    historical = read_json(HISTORICAL_COEFFICIENTS).get("epochs", {}).get(str(epoch))
+    if not historical:
+        return None
+    return {model_id: Decimal(str(value)) for model_id, value in historical.items()}
 
 
 def fixed_epoch_reward(chain_params: dict[str, Any], epoch: int) -> int:
@@ -316,7 +326,8 @@ def model_status(
     }
 
 
-def scan_epoch(epoch: int, chain_params: dict[str, Any], coefficients: dict[str, Decimal]) -> dict[str, Any]:
+def scan_epoch(epoch: int, chain_params: dict[str, Any], default_coefficients: dict[str, Decimal]) -> dict[str, Any]:
+    coefficients = historical_model_coefficients(epoch) or default_coefficients
     aggregate = epoch_group(epoch)
     root_total_weight = int_of(aggregate.get("total_weight"))
     root_weights = {
